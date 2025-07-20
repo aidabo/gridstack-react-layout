@@ -1,12 +1,12 @@
-import {
-  useState,
-} from "react";
+import { useState } from "react";
 
 // Add below your Text component
-function Counter({ initialCount }: { initialCount: number }) {
+function Counter({ initialCount, title }: { initialCount: number, title?: string }) {
   const [count, setCount] = useState(initialCount);
+
   return (
-    <div className="w-full h-full flex items-center justify-center gap-2">
+    <div className="absolute inset-0 flex items-center justify-center p-1">
+      {/* <h3 className="text-lg font-bold">{title}</h3> */}
       <button onClick={() => setCount(c => c-1)}>-</button>
       <span>{count}</span>
       <button onClick={() => setCount(c => c+1)}>+</button>

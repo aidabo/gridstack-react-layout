@@ -1,8 +1,8 @@
-
-function Image({ src }: { src: string }) {
+function Image({ src, title}: { src: string, title?: string }) {
   return (
-    <div className="w-full h-full flex items-center justify-center">
+   <div className="absolute inset-0 flex items-center justify-center p-1">
       <img 
+        onClick={()=>alert("this is a image")}
         src={src} 
         alt="Widget" 
         className="max-w-full max-h-full object-contain"
@@ -12,3 +12,5 @@ function Image({ src }: { src: string }) {
 }
 
 export default Image ;
+
+

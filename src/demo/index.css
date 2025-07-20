@@ -1,0 +1,12 @@
+@import 'gridstack/dist/gridstack.css';
+@import './demo.css';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; 
+
+/* Custom components layer */
+@layer components {
+  
+}
+

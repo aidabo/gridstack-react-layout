@@ -1,7 +1,6 @@
 import type { GridStack, GridStackOptions, GridStackWidget } from "gridstack";
 import { type PropsWithChildren, useCallback, useState } from "react";
 import { GridStackContext } from "./grid-stack-context";
-import { v4 as uuidv4 } from 'uuid';
 
 export function GridStackProvider({
   children,
@@ -28,8 +27,7 @@ export function GridStackProvider({
 
   const addWidget = useCallback(
     (fn: (id: string) => Omit<GridStackWidget, "id">) => {
-      //const newId = `widget-${Math.random().toString(36).substring(2, 15)}`;
-      const newId = `widget-${uuidv4()}`;
+      const newId = `widget-${Math.random().toString(36).substring(2, 15)}`;
       const widget = fn(newId);
       gridStack?.addWidget({ ...widget, id: newId });
       setRawWidgetMetaMap((prev) => {
@@ -48,15 +46,13 @@ export function GridStackProvider({
         withWidget: (w: Omit<GridStackWidget, "id">) => GridStackWidget
       ) => Omit<GridStackWidget, "id">
     ) => {
-      //const newId = `sub-grid-${Math.random().toString(36).substring(2, 15)}`;
-      const newId = `subgrid-${uuidv4()}`;
+      const newId = `sub-grid-${Math.random().toString(36).substring(2, 15)}`;
       const subWidgetIdMap = new Map<string, GridStackWidget>();
 
       const widget = fn(newId, (w) => {
-        // const subWidgetId = `widget-${Math.random()
-        //   .toString(36)
-        //   .substring(2, 15)}`;
-        const subWidgetId = `widget-${uuidv4()}`;
+        const subWidgetId = `widget-${Math.random()
+          .toString(36)
+          .substring(2, 15)}`;
         subWidgetIdMap.set(subWidgetId, w);
         return { ...w, id: subWidgetId };
       });

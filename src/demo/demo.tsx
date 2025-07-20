@@ -1,159 +1,17 @@
-import { ComponentProps, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { GridStackOptions, GridStackWidget } from "gridstack";
 import {
-  ComponentDataType,
-  ComponentMap,
   GridStackProvider,
   GridStackRender,
   GridStackRenderProvider,
   useGridStackContext,
 } from "../../lib";
 
-import "gridstack/dist/gridstack.css";
 import "./demo.css";
-import Counter from "../widgets/Counter";
-import Image from "../widgets/Image";
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
-const CELL_HEIGHT = 50;
-const BREAKPOINTS = [
-  { c: 1, w: 700 },
-  { c: 3, w: 850 },
-  { c: 6, w: 950 },
-  { c: 8, w: 1100 },
-];
-
-function Text({ content }: { content: string }) {
-  return <div className="w-full h-full">{content}</div>;
-} 
-
-const COMPONENT_MAP: ComponentMap = {
-  Text,
-  Counter,
-  Image,
-};
-
-// Initial grid options
-const gridOptions: GridStackOptions = {
-  acceptWidgets: true,
-  columnOpts: {
-    breakpointForWindow: true,
-    breakpoints: BREAKPOINTS,
-    layout: "moveScale",
-    columnMax: 12,
-  },
-  margin: 8,
-  cellHeight: CELL_HEIGHT,
-  subGridOpts: {
-    acceptWidgets: true,
-    columnOpts: {
-      breakpoints: BREAKPOINTS,
-      layout: "moveScale",
-    },
-    margin: 8,
-    minRow: 2,
-    cellHeight: CELL_HEIGHT,
-  },
-  children: [
-    {
-      id: "item1",
-      h: 2,
-      w: 2,
-      x: 0,
-      y: 0,
-      content: JSON.stringify({
-        name: "Text",
-        props: { content: "Item 1" },
-      }),
-    },
-    {
-      id: "item2",
-      h: 2,
-      w: 2,
-      x: 2,
-      y: 0,
-      content: JSON.stringify({
-        name: "Text",
-        props: { content: "Item 2" },
-      }),
-    },
-    {
-      id: "counter1",
-      w: 3,
-      h: 2,
-      x: 4,
-      y: 0,
-      content: JSON.stringify({
-        name: "Counter",
-        props: { initialCount: 5 }
-      })
-    },
-    {
-      id: "image1",
-      w: 4,
-      h: 3,
-      x: 0,
-      y: 8,
-      content: JSON.stringify({
-        name: "Image",
-        props: { src: "https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png " }
-      })
-    },
-    {
-      id: "sub-grid-1",
-      h: 5,
-      sizeToContent: true,
-      subGridOpts: {
-        acceptWidgets: true,
-        cellHeight: CELL_HEIGHT,
-        alwaysShowResizeHandle: false,
-        column: "auto",
-        minRow: 2,
-        layout: "list",
-        margin: 8,
-        children: [
-          {
-            id: "sub-grid-1-title",
-            locked: true,
-            noMove: true,
-            noResize: true,
-            w: 12,
-            x: 0,
-            y: 0,
-            content: JSON.stringify({
-              name: "Text",
-              props: { content: "Sub Grid 1 Title" },
-            }),
-          },
-          {
-            id: "item3",
-            h: 2,
-            w: 2,
-            x: 0,
-            y: 1,
-            content: JSON.stringify({
-              name: "Text",
-              props: { content: "Item 3" },
-            }),
-          },
-          {
-            id: "item4",
-            h: 2,
-            w: 2,
-            x: 2,
-            y: 0,
-            content: JSON.stringify({
-              name: "Text",
-              props: { content: "Item 4" },
-            }),
-          },
-        ],
-      },
-      w: 12,
-      x: 0,
-      y: 2,
-    },
-  ],
-};
+import { gridOptions, subGridOptions } from "./stackoptions";
+import { getComponentMap } from "./stackcomponents";
 
 export function GridStackDemo() {
   const [resetKey, setResetKey] = useState(0);
@@ -188,16 +46,21 @@ export function GridStackDemo() {
     setResetKey(prev => prev + 1); // Force remount
   };
 
+  const handleShowLayoutInfo = () =>{
+
+  }
+
   return (
     <GridStackProvider key={resetKey} initialOptions={initialOptions}>
       <Toolbar 
         onSaveLayout={saveLayout} 
         onReloadLayout={handleReloadLayout} 
         onClearLayout={handleClearLayout}
+        onShowLayoutInfo={handleShowLayoutInfo}
       />
 
       <GridStackRenderProvider>
-        <GridStackRender componentMap={COMPONENT_MAP} />
+        <GridStackRender componentMap={getComponentMap()} />
       </GridStackRenderProvider> 
 
       {/* <DebugInfo /> */}
@@ -209,10 +72,12 @@ function Toolbar({
   onSaveLayout, 
   onReloadLayout,
   onClearLayout, 
+  onShowLayoutInfo,
 }: { 
   onSaveLayout: (layout: GridStackOptions | GridStackWidget[] | undefined) => void;
   onReloadLayout: (pageName?: string) => void;
   onClearLayout: () => void;
+  onShowLayoutInfo: () =>void;
 }) {
   const { addWidget, addSubGrid, saveOptions } = useGridStackContext();
 
@@ -232,6 +97,10 @@ function Toolbar({
     alert('Layout cleared!');
   };
 
+  const handleShowLayoutInfo = () =>{
+    onShowLayoutInfo();
+  }
+
   return (
     <div
       style={{
@@ -242,6 +111,7 @@ function Toolbar({
         display: "flex",
         flexDirection: "row",
         gap: "10px",
+        fontSize: "18px"
       }}
     >
       <button
@@ -253,7 +123,7 @@ function Toolbar({
             y: 0,
             content: JSON.stringify({
               name: "Text",
-              props: { content: id },
+              props: { content: id, title: "This is a test" },
             }),
           }));
         }}
@@ -285,7 +155,7 @@ function Toolbar({
             content: JSON.stringify({
               name: "Image",
               props: { 
-                src: "https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png "
+                src: "https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png"
               }
             })
           }));
@@ -298,33 +168,10 @@ function Toolbar({
         onClick={() => {
           addSubGrid((id, withWidget) => ({
             h: 5,
-            noResize: false,
-            sizeToContent: true,
-            subGridOpts: {
-              acceptWidgets: true,
-              columnOpts: { breakpoints: BREAKPOINTS, layout: "moveScale" },
-              margin: 8,
-              minRow: 2,
-              cellHeight: CELL_HEIGHT,
-              children: [
-                withWidget({
-                  h: 1,
-                  locked: true,
-                  noMove: true,
-                  noResize: true,
-                  w: 12,
-                  x: 0,
-                  y: 0,
-                  content: JSON.stringify({
-                    name: "Text",
-                    props: { content: "Sub Grid 1 Title" + id },
-                  }),
-                }),
-              ],
-            },
             w: 12,
             x: 0,
             y: 0,
+            ...subGridOptions
           }));
         }}
       >
@@ -342,65 +189,14 @@ function Toolbar({
       <button onClick={handleClearLayout}>
         Reset to Default
       </button>
-    </div>
-  );
-}
 
-function DebugInfo() {
-  const { initialOptions, saveOptions } = useGridStackContext();
+      <button onClick={handleShowLayoutInfo}>
+        Show Page Layout Info
+      </button>
 
-  const [realtimeOptions, setRealtimeOptions] = useState<
-    GridStackOptions | GridStackWidget[] | undefined
-  >(undefined);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (saveOptions) {
-        const data = saveOptions();
-        setRealtimeOptions(data);
-      }
-    }, 2000);
-
-    return () => clearInterval(timer);
-  }, [saveOptions]);
-
-  return (
-    <div>
-      <h2>Debug Info</h2>
-      <div
-        style={{
-          display: "grid",
-          gap: "1rem",
-          gridTemplateColumns: "repeat(2, 1fr)",
-        }}
-      >
-        <div>
-          <h3>Initial Options</h3>
-          <pre
-            style={{
-              backgroundColor: "#f3f4f6",
-              padding: "1rem",
-              borderRadius: "0.25rem",
-              overflow: "auto",
-            }}
-          >
-            {JSON.stringify(initialOptions, null, 2)}
-          </pre>
-        </div>
-        <div>
-          <h3>Realtime Options (2s refresh)</h3>
-          <pre
-            style={{
-              backgroundColor: "#f3f4f6",
-              padding: "1rem",
-              borderRadius: "0.25rem",
-              overflow: "auto",
-            }}
-          >
-            {JSON.stringify(realtimeOptions, null, 2)}
-          </pre>
-        </div>
-      </div>      
+      <div className=".trash" >
+        <DeleteOutlineIcon style={{fontSize: "32px"}}/>
+      </div>
     </div>
   );
 }

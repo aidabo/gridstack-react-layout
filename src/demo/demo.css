@@ -1,10 +1,16 @@
+/* @import 'tailwindcss/base'; */
 .grid-stack {
-  background: #FAFAD2;
+  background: rgba(240,240, 240, 0.9);
 }
 
 .grid-stack-item-content {
   text-align: center;
-  background-color: #18bc9c;
+  /* background-color: #18bc9c; */
+  background-color: rgba(200,200,200,0.1);
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-stack-item-removing {
@@ -17,7 +23,7 @@
 
 /* make nested grid have slightly darker bg take almost all space (need some to tell them apart) so items inside can have similar to external size+margin */
 .grid-stack > .grid-stack-item.grid-stack-sub-grid > .grid-stack-item-content {
-  background: rgba(0,0,0,0.1);
+  background: rgba(220,220, 220, 0.9);
   inset: 8px 8px;
 }
 .grid-stack.grid-stack-nested {
@@ -40,8 +46,22 @@
   overflow: hidden !important;
 }
 
+/* demo.css */
+.widget-header {
+  height: 36px;
+  min-height: 36px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  background-color: inherit;
+  border-bottom: 1px solid #e0e0e0;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
+

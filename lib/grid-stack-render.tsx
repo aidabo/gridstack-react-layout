@@ -4,6 +4,7 @@ import { useGridStackRenderContext } from "./grid-stack-render-context";
 import { GridStackWidgetContext } from "./grid-stack-widget-context";
 import { GridStackWidget } from "gridstack";
 import { ComponentType } from "react";
+import { GridStackItemMenu } from "./grid-stack-Item-menu";
 
 export interface ComponentDataType<T = object> {
   name: string;
@@ -46,19 +47,28 @@ export function GridStackRender(props: { componentMap: ComponentMap }) {
     <>
       {Array.from(_rawWidgetMetaMap.value.entries()).map(([id, meta]) => {
         const componentData = parseWeightMetaToComponentData(meta);
-
         const WidgetComponent = props.componentMap[componentData.name];
-
         const widgetContainer = getWidgetContainer(id);
 
-        if (!widgetContainer) {
-          throw new Error(`Widget container not found for id: ${id}`);
-        }
+        if (!widgetContainer) return null;
+
+        const title = componentData.props?.title || `Widget ${id.slice(0,4)}`;
 
         return (
           <GridStackWidgetContext.Provider key={id} value={{ widget: { id } }}>
             {createPortal(
-              <WidgetComponent {...componentData.props} />,
+              <div className="w-full h-full flex flex-col">
+                {/* Header row with title and menu */}
+                <div className="widget-header flex items-center justify-between bg-gray-100 border-b px-2 py-1 min-h-[36px]">
+                  <div className="font-medium truncate text-sm px-6">{title}</div>                  
+                  <GridStackItemMenu widgetId={id} />
+                </div>
+                
+                {/* Widget content area */}
+                <div className="flex-1 min-h-0 relative">
+                  <WidgetComponent {...componentData.props} />                  
+                </div>
+              </div>,
               widgetContainer
             )}
           </GridStackWidgetContext.Provider>
