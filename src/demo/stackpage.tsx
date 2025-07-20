@@ -12,13 +12,15 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import EditIcon from "@mui/icons-material/Edit";
 import Tooltip from "@mui/material/Tooltip";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import Fab from "@mui/material/Fab";
 
 import AddIcon from "@mui/icons-material/Add";
-import PreviewIcon from "@mui/icons-material/Preview";
-import SaveIcon from "@mui/icons-material/Save";
+import PreviewIcon from "@mui/icons-material/VisibilityOutlined";
+import SaveIcon from "@mui/icons-material/SaveOutlined";
 import ClearIcon from "@mui/icons-material/Clear";
 import ArrowBackIcon from "@mui/icons-material/KeyboardReturn";
 import InfoOutlineIcon from "@mui/icons-material/InfoOutline";
@@ -26,13 +28,14 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 
 import GridStackToolbar from "./stacktoolbar";
 import {
+  ComponentMap,
   GridStackProvider,
   GridStackRender,
   GridStackRenderProvider,
 } from "../../lib";
 import { getComponentMap, getComponentProps } from "./stackcomponents";
 import { GridStackOptions, GridStackWidget } from "gridstack";
-import { gridOptions, subGridOptions, PageProps } from "./stackoptions";
+import { gridOptions, subGridOptions, PageProps, ComponentProps } from "./stackoptions";
 
 import StackActions, { StackActionsRef } from "./stackactions";
 import DeleteDropZone from "./deletedropzone";
@@ -43,8 +46,11 @@ import "./demo.css";
 
 const drawerWidth = 360;
 
-const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
+const Main = styled("main", {
+  shouldForwardProp: (prop) => prop !== "open" && prop !== "mode",
+})<{
   open?: boolean;
+  mode?: "read" | "edit" | "preview"; // Add pageMode prop
 }>(({ theme }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
@@ -52,22 +58,28 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  marginRight: -drawerWidth,
-  /**
-   * This is necessary to enable the selection of content. In the DOM, the stacking order is determined
-   * by the order of appearance. Following this rule, elements appearing later in the markup will overlay
-   * those that appear earlier. Since the Drawer comes after the Main content, this adjustment ensures
-   * proper interaction with the underlying content.
-   */
+  marginRight: -drawerWidth, // Default value
   position: "relative",
   variants: [
     {
-      props: ({ open }) => open,
+      props: { open: true },
       style: {
         transition: theme.transitions.create("margin", {
           easing: theme.transitions.easing.easeOut,
           duration: theme.transitions.duration.enteringScreen,
         }),
+        marginRight: 0,
+      },
+    },
+    {
+      props: { mode: "read" },
+      style: {
+        marginRight: 0,
+      },
+    },
+    {
+      props: { mode: "preview" },
+      style: {
         marginRight: 0,
       },
     },
@@ -110,10 +122,14 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export function StackPage({
+  pageMode,
   pageProps,
   onSaveLayout,
   onLoadLayout,
+  onGetComponentMap,
+  onGetComponentProps,
 }: {
+  pageMode: "edit" | "read" | "preview";
   pageProps: PageProps;
   onSaveLayout: (
     pageid: string,
@@ -122,9 +138,14 @@ export function StackPage({
   onLoadLayout: (
     pageid: string
   ) => Promise<GridStackOptions | GridStackWidget[] | undefined>;
+  onGetComponentMap?: () => ComponentMap;
+  onGetComponentProps?: () => ComponentProps;
 }) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const [mode, setMode] = useState(pageMode || "edit");
+  const [pageid, setPageid] = useState(pageProps.id);
+
   const [resetKey, setResetKey] = useState(0);
   const [initialOptions, setInitialOptions] =
     useState<GridStackOptions>(gridOptions);
@@ -132,7 +153,10 @@ export function StackPage({
 
   const [dropEvent, setDropEvent] = useState<GridStackDropEvent>();
   const [showGridInfo, setShowGridInfo] = useState(false);
-  const [pageid, setPageid] = useState(pageProps.id);
+  const [currentLayout, setCurrentLayout] = useState<
+    GridStackOptions | GridStackWidget[] | undefined
+  >();
+  const [hiddenHeader, setHiddenHeader] = useState(pageProps.hiddenWidgetHeader);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -146,11 +170,17 @@ export function StackPage({
     }));
     // Auto-hide after 3 seconds
     setTimeout(() => {
-      setActionFeedback((prev) => ({
+      setActionFeedback((prev: any) => ({
         ...prev,
         [action]: { ...prev[action], show: false },
       }));
     }, 3000);
+  };
+
+  useEffect(() => {}, [mode]);
+
+  const isPageEditMode = () => {
+    return mode === "edit";
   };
 
   const handleDrawerOpen = () => {
@@ -199,7 +229,16 @@ export function StackPage({
 
   const handleBack2List = () => {};
 
-  const handlePreviewLayout = () => {};
+  const handleSwitchLayout = () => {
+    if (mode === "edit") {
+      setCurrentLayout(stackActionsRef.current?.saveLayout());
+      setMode("preview");
+    } else if (mode === "preview") {
+      setInitialOptions(currentLayout as any);
+      setResetKey((prev) => prev + 1);
+      setMode("edit");
+    }
+  };
 
   const handleDropEvent = (event: GridStackDropEvent) => {
     setDropEvent(event);
@@ -218,7 +257,7 @@ export function StackPage({
           ...dropEvent,
           content: JSON.stringify({
             name: dropEvent.name,
-            props: getComponentProps()[dropEvent.name],
+            props: getComponentProps(onGetComponentProps)[dropEvent.name],
           }),
         }));
       } else {
@@ -236,129 +275,158 @@ export function StackPage({
   return (
     <GridStackProvider key={resetKey} initialOptions={initialOptions}>
       <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar position="fixed" open={open}>
-          <Toolbar>
-            <Typography
-              variant="h6"
-              noWrap
-              sx={{ flexGrow: 1 }}
-              component="div"
-            >
-              Page Create
-            </Typography>
+        {isPageEditMode() && <CssBaseline />}
+        {isPageEditMode() && (
+          <AppBar position="fixed" open={open}>
+            <Toolbar>
+              <Typography
+                variant="h6"
+                noWrap
+                sx={{ flexGrow: 1 }}
+                component="div"
+              >
+                Page Create
+              </Typography>
 
-            <Tooltip title="Create new page">
+              <Tooltip title="Create new page">
+                <IconButton
+                  color="inherit"
+                  edge="end"
+                  onClick={handleCreateLayout}
+                >
+                  <AddIcon />
+                </IconButton>
+              </Tooltip>
+
+              <Snackbar
+                open={Object.values(actionFeedback).some((a) => a.show)}
+                autoHideDuration={3000}
+                onClose={() =>
+                  setActionFeedback({
+                    save: { show: false, message: "" },
+                    reload: { show: false, message: "" },
+                  })
+                }
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+              >
+                <Alert severity="info" sx={{ width: "100%" }}>
+                  {Object.values(actionFeedback).find((a) => a.show)?.message ||
+                    ""}
+                </Alert>
+              </Snackbar>
+
+              <Tooltip title="Save page">
+                <IconButton
+                  color="inherit"
+                  edge="end"
+                  onClick={() => handleSaveLayout()}
+                >
+                  <SaveIcon sx={{ marginX: 1 }} />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip
+                title="Preview page"
+                onClick={() => handleSwitchLayout()}
+              >
+                <IconButton color="inherit" edge="end">
+                  <PreviewIcon sx={{ marginX: 1 }} />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="reload page" onClick={() => handleReloadLayout()}>
+                <IconButton color="inherit" edge="end">
+                  <AutorenewIcon sx={{ marginX: 1 }} />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="Clear page">
+                <IconButton
+                  color="inherit"
+                  edge="end"
+                  onClick={handleClearLayout}
+                >
+                  <ClearIcon sx={{ marginX: 1 }} />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="Page Info" onClick={() => setShowGridInfo(true)}>
+                <IconButton color="inherit" edge="end">
+                  <InfoOutlineIcon sx={{ marginX: 1 }} />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip
+                title="Back to page list"
+                onClick={() => handleBack2List()}
+              >
+                <IconButton color="inherit" edge="end">
+                  <ArrowBackIcon sx={{ marginLeft: 1, marginRight: 2 }} />
+                </IconButton>
+              </Tooltip>
+
               <IconButton
                 color="inherit"
+                aria-label="open drawer"
                 edge="end"
-                onClick={handleCreateLayout}
+                onClick={() => handleDrawerOpen()}
+                sx={[open && { display: "none" }]}
               >
-                <AddIcon />
+                <MenuIcon />
               </IconButton>
-            </Tooltip>
-
-            <Snackbar
-              open={Object.values(actionFeedback).some((a) => a.show)}
-              autoHideDuration={3000}
-              onClose={() =>
-                setActionFeedback({
-                  save: { show: false, message: "" },
-                  reload: { show: false, message: "" },
-                })
-              }
-              anchorOrigin={{ vertical: "top", horizontal: "center" }}
-            >
-              <Alert severity="info" sx={{ width: "100%" }}>
-                {Object.values(actionFeedback).find((a) => a.show)?.message ||
-                  ""}
-              </Alert>
-            </Snackbar>
-
-            <Tooltip title="Save page">
-              <IconButton color="inherit" edge="end" onClick={handleSaveLayout}>
-                <SaveIcon sx={{ marginX: 1 }} />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Preview page" onClick={handlePreviewLayout}>
-              <IconButton color="inherit" edge="end">
-                <PreviewIcon sx={{ marginX: 1 }} />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="reload page" onClick={handleReloadLayout}>
-              <IconButton color="inherit" edge="end">
-                <AutorenewIcon sx={{ marginX: 1 }} />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Clear page">
-              <IconButton
-                color="inherit"
-                edge="end"
-                onClick={handleClearLayout}
-              >
-                <ClearIcon sx={{ marginX: 1 }} />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Page Info" onClick={() => setShowGridInfo(true)}>
-              <IconButton color="inherit" edge="end">
-                <InfoOutlineIcon sx={{ marginX: 1 }} />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Back to page list" onClick={handleBack2List}>
-              <IconButton color="inherit" edge="end">
-                <ArrowBackIcon sx={{ marginLeft: 1, marginRight: 2 }} />
-              </IconButton>
-            </Tooltip>
-
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerOpen}
-              sx={[open && { display: "none" }]}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        <Main open={open}>
-          <DrawerHeader></DrawerHeader>
+            </Toolbar>
+          </AppBar>
+        )}
+        {mode === "preview" && (
+          <Fab
+            color="secondary"
+            aria-label="edit"
+            sx={{
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              zIndex: 1200,
+            }}
+          >
+            <EditIcon onClick={() => handleSwitchLayout()} />
+          </Fab>
+        )}
+        <Main open={open} mode={mode}>
+          {isPageEditMode() && <DrawerHeader></DrawerHeader>}
           <StackActions ref={stackActionsRef} />
           <GridStackRenderProvider onGridStackDropEvent={handleDropEvent}>
-            <GridStackRender componentMap={getComponentMap()} />
+            <GridStackRender componentMap={getComponentMap(onGetComponentMap)} hiddenHeader={hiddenHeader} />
           </GridStackRenderProvider>
         </Main>
-        <Drawer
-          sx={{
-            width: drawerWidth,
-            flexShrink: 0,
-            "& .MuiDrawer-paper": {
+        {isPageEditMode() && (
+          <Drawer
+            sx={{
               width: drawerWidth,
-            },
-          }}
-          variant="persistent"
-          anchor="right"
-          open={open}
-        >
-          <DrawerHeader>
-            <IconButton onClick={handleDrawerClose}>
-              {theme.direction === "rtl" ? (
-                <ChevronLeftIcon />
-              ) : (
-                <ChevronRightIcon />
-              )}
-            </IconButton>
-          </DrawerHeader>
-          <Divider />
-          <DeleteDropZone onDropDelete={() => {}} />
-          <Divider />
-          <GridStackToolbar componentMap={getComponentMap()} />
-        </Drawer>
+              flexShrink: 0,
+              "& .MuiDrawer-paper": {
+                width: drawerWidth,
+              },
+            }}
+            variant="persistent"
+            anchor="right"
+            open={open}
+          >
+            <DrawerHeader>
+              <IconButton onClick={() => handleDrawerClose()}>
+                {theme.direction === "rtl" ? (
+                  <ChevronLeftIcon />
+                ) : (
+                  <ChevronRightIcon />
+                )}
+              </IconButton>
+            </DrawerHeader>
+            <Divider />
+            <DeleteDropZone onDropDelete={() => {}} />
+            <Divider />
+            <GridStackToolbar componentMap={getComponentMap(onGetComponentMap)} />
+          </Drawer>
+        )}
         <PageInfoDialogs
           isOpen={showGridInfo}
           pageInfo={getPageInfo()}

@@ -39,7 +39,7 @@ function parseWeightMetaToComponentData(
   };
 }
 
-export function GridStackRender(props: { componentMap: ComponentMap }) {
+export function GridStackRender(props: { componentMap: ComponentMap, hiddenHeader?: boolean }) {
   const { _rawWidgetMetaMap } = useGridStackContext();
   const { getWidgetContainer } = useGridStackRenderContext();
 
@@ -59,10 +59,12 @@ export function GridStackRender(props: { componentMap: ComponentMap }) {
             {createPortal(
               <div className="w-full h-full flex flex-col">
                 {/* Header row with title and menu */}
+                {!props.hiddenHeader && (
                 <div className="widget-header flex items-center justify-between bg-gray-100 border-b px-2 py-1 min-h-[36px]">
                   <div className="font-medium truncate text-sm px-6">{title}</div>                  
                   <GridStackItemMenu widgetId={id} />
                 </div>
+                )}
                 
                 {/* Widget content area */}
                 <div className="flex-1 min-h-0 relative">

@@ -62,10 +62,11 @@ export interface PageProps {
   image?: string;
   tag?: string;
   status?: string;
+  hiddenWidgetHeader?: boolean,
   grids:  GridStackOptions | GridStackWidget[] | undefined;
 }
 
-export interface CompProps {
+export interface ComponentProps {
   [key: string]: any;
 }
 

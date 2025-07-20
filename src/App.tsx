@@ -8,14 +8,11 @@ const defaultPageProps: PageProps = getDefaultPageProps();
 
 function App() {
   const [pageProps, setPageProps] = useState<PageProps>(defaultPageProps);
-  const [pageid, setPageId] = useState(pageProps.id);
-
   const { getPageById, savePage } = useLayoutStore();
 
   const saveLayout = async (pageid: string, layout: any) => {
     if (layout && pageProps && pageProps.id === pageid) {
       pageProps.grids = layout;
-      console.log("saveLayout called............")
       await savePage(pageProps);
     }
   };
@@ -33,6 +30,7 @@ function App() {
   return (
     <>
       <StackPage
+        pageMode="edit"
         pageProps={pageProps}
         onSaveLayout={saveLayout}
         onLoadLayout={loadLayout}

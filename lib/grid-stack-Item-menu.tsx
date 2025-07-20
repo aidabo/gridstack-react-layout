@@ -5,6 +5,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import IconButton from '@mui/material/IconButton';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { useGridStackContext } from "./grid-stack-context";
 
 export interface GridStackItemMenuProps {
@@ -15,7 +16,7 @@ export interface GridStackItemMenuProps {
 export function GridStackItemMenu({ 
   widgetId,
 }: GridStackItemMenuProps) {    
-  const { removeWidget } = useGridStackContext();
+  const { removeWidget, gridStack } = useGridStackContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   
@@ -29,14 +30,16 @@ export function GridStackItemMenu({
   };
 
   const handleDelete = () => {
-    alert(widgetId);
     removeWidget(widgetId);
     handleClose();
   };
 
   return (
     <React.Fragment>
-      <div className="flex justify-end">
+      <div className="flex justify-end size-4">
+        <IconButton>
+          <SettingsOutlinedIcon/>
+        </IconButton>
         <IconButton
           onClick={handleClick}
           size="small"

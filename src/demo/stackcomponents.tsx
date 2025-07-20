@@ -1,5 +1,5 @@
 import { ComponentMap } from "../../lib";
-import { CompProps } from "./stackoptions"
+import { ComponentProps } from "./stackoptions"
 
 import Text from "../widgets/Text"
 import Counter from "../widgets/Counter";
@@ -30,7 +30,7 @@ const defaultComponents: ComponentMap = {
   Image,
 };
 
-const defaultComponentProps: CompProps =  {
+const defaultComponentProps: ComponentProps =  {
   Text: { content: "", title: "This is Text" },
   Counter: { initialCount: 0, title: "This is Counter"},
   Image: {src: "https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png", title: "This is Image"},

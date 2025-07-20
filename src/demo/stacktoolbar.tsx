@@ -6,8 +6,12 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Grid from "@mui/material/Grid";
 import AddIcon from "@mui/icons-material/Add";
-import { ComponentMap } from "../../lib";
-import { Divider } from "@mui/material";
+import { Divider, IconButton } from "@mui/material";
+import { v4 as uuidv4 } from "uuid";
+
+import { ComponentMap, useGridStackContext } from "../../lib";
+import { getComponentProps } from "./stackcomponents";
+import { subGridOptions } from "./stackoptions";
 
 export default function GridStackToolbar({
   componentMap,
@@ -15,6 +19,7 @@ export default function GridStackToolbar({
   componentMap: ComponentMap;
 }) {
   const [value, setValue] = React.useState("widget");
+  const { addWidget, addSubGrid } = useGridStackContext();
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -28,6 +33,31 @@ export default function GridStackToolbar({
 
   const handleDragEnd = (e: React.DragEvent) => {
     (e.target as HTMLElement).style.opacity = "1";
+  };
+
+  const handleAddWidget = (key: string) => {
+    const widgetId = uuidv4();
+    addWidget((_id) => ({
+      h: 4,
+      w: 4,
+      x: 0,
+      y: 0,
+      id: widgetId,
+      content: JSON.stringify({
+        name: key,
+        props: getComponentProps()[key],
+      }),
+    }));
+  };
+
+  const handleAddSubGrid = () => {
+    addSubGrid((_id/*, withWidget*/) => ({
+      h: 1,
+      w: 12,
+      x: 0,
+      y: 0,
+      ...subGridOptions,
+    }));
   };
 
   return (
@@ -57,7 +87,9 @@ export default function GridStackToolbar({
               }}
             >
               <div style={{ textAlign: "center" }}>
-                <AddIcon />
+                <IconButton color="inherit" onClick={() => handleAddSubGrid()}>
+                  <AddIcon />
+                </IconButton>
               </div>
               <div>SubGrid</div>
             </div>
@@ -90,7 +122,12 @@ export default function GridStackToolbar({
                     }}
                   >
                     <div style={{ textAlign: "center" }}>
-                      <AddIcon />
+                      <IconButton
+                        color="inherit"
+                        onClick={() => handleAddWidget(key)}
+                      >
+                        <AddIcon />
+                      </IconButton>
                     </div>
                     <div>{key}</div>
                   </div>
