@@ -10,13 +10,14 @@ import { Divider, IconButton } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
 
 import { ComponentMap, useGridStackContext } from "../../lib";
-import { getComponentProps } from "./stackcomponents";
-import { subGridOptions } from "./stackoptions";
+import { subGridOptions, ComponentProps } from "./stackoptions";
 
 export default function GridStackToolbar({
   componentMap,
+  componentProps,
 }: {
   componentMap: ComponentMap;
+  componentProps: ComponentProps;
 }) {
   const [value, setValue] = React.useState("widget");
   const { addWidget, addSubGrid } = useGridStackContext();
@@ -37,6 +38,7 @@ export default function GridStackToolbar({
 
   const handleAddWidget = (key: string) => {
     const widgetId = uuidv4();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     addWidget((_id) => ({
       h: 4,
       w: 4,
@@ -45,13 +47,14 @@ export default function GridStackToolbar({
       id: widgetId,
       content: JSON.stringify({
         name: key,
-        props: getComponentProps()[key],
+        props: componentProps[key],
       }),
     }));
   };
 
   const handleAddSubGrid = () => {
-    addSubGrid((_id/*, withWidget*/) => ({
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    addSubGrid((_id /*, withWidget*/) => ({
       h: 1,
       w: 12,
       x: 0,
@@ -69,7 +72,16 @@ export default function GridStackToolbar({
             <Tab label="Properties" value="properties" />
           </TabList>
         </Box>
-        <TabPanel value="widget" className="sidepanel">
+
+        <TabPanel
+          value="widget"
+          className="sidepanel"
+          sx={{
+            overflowX: "auto",
+            maxWidth: "100%",
+            padding: { xs: 1, sm: 2 },
+          }}
+        >
           <Box component="section" sx={{ p: 2, border: "1px dashed grey" }}>
             <div
               className="grid-stack-item grid-stack-item-widget"
@@ -129,7 +141,15 @@ export default function GridStackToolbar({
                         <AddIcon />
                       </IconButton>
                     </div>
-                    <div style={{marginTop: 5}}>{key}</div>
+                    <div
+                      style={{
+                        marginTop: 5,
+                        whiteSpace: "normal",
+                        wordBreak: "break-word",
+                      }}
+                    >
+                      {key}
+                    </div>
                   </div>
                 </Box>
               </Grid>

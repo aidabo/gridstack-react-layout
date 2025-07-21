@@ -1,4 +1,4 @@
-import { PageProps } from "./stackoptions"
+import { PageProps } from "../components/stackoptions"
 
 const webApiUrl = "/api"
 
@@ -25,8 +25,8 @@ export const useLayoutStore = () => {
       }
       const data = (await response.json()) as PageProps[];
       return data;
-    } catch (error) {
-      console.error("fetchPageList error:", error);
+    } catch {
+      //console.error("fetchPageList error:", error);
       return false;
     }
   }

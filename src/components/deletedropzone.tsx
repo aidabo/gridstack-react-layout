@@ -33,7 +33,7 @@ export default function DeleteDropZone({ onDropDelete }: { onDropDelete: () => v
           bgcolor: '#ffcdd2', // light red background
           width: '100%',
           height: '100%',
-          m: 0,
+          m: 3,
         }}
         variant='rounded'
       >

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -17,6 +17,7 @@ import Tooltip from "@mui/material/Tooltip";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Fab from "@mui/material/Fab";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 import AddIcon from "@mui/icons-material/Add";
 import PreviewIcon from "@mui/icons-material/VisibilityOutlined";
@@ -28,21 +29,31 @@ import AutorenewIcon from "@mui/icons-material/Autorenew";
 
 import GridStackToolbar from "./stacktoolbar";
 import {
-  ComponentMap,
   GridStackProvider,
   GridStackRender,
   GridStackRenderProvider,
 } from "../../lib";
-import { getComponentMap, getComponentProps } from "./stackcomponents";
 import { GridStackOptions, GridStackWidget } from "gridstack";
-import { gridOptions, subGridOptions, PageProps, ComponentProps, getDefaultPageProps } from "./stackoptions";
+import {
+  gridOptions,
+  subGridOptions,
+  PageProps,
+  getDefaultPageProps,
+  getComponentMap,
+  getComponentProps,
+  ComponentMapProvider, 
+  ComponentPropsProvider,
+  GoBackListFn,
+  LoadLayoutFn,
+  SaveLayoutFn
+} from "./stackoptions";
 
 import StackActions, { StackActionsRef } from "./stackactions";
 import DeleteDropZone from "./deletedropzone";
 import { GridStackDropEvent } from "../../lib/grid-stack-render-provider";
 import PageInfoDialogs from "./pageinfodialog";
 
-import "./demo.css";
+import "./index.css";
 
 const drawerWidth = 360;
 
@@ -121,31 +132,30 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-start",
 }));
 
-export function StackPage({
+export default function StackPage({
   pageid,
   pageMode,
-  onSaveLayout,
   onLoadLayout,
-  onGetComponentMap,
-  onGetComponentProps,
+  onSaveLayout,
+  componentMapProvider,
+  componentPropsProvider,
+  gobackList,
 }: {
   pageid: string;
   pageMode: "edit" | "read" | "preview";
-  onSaveLayout: (
-    pageid: string,
-    pageProps: PageProps
-  ) => void;
-  onLoadLayout: (
-    pageid: string
-  ) => Promise<PageProps>;
-  onGetComponentMap?: () => ComponentMap;
-  onGetComponentProps?: () => ComponentProps;
+  onLoadLayout: LoadLayoutFn; //(pageid: string) => Promise<PageProps>;
+  onSaveLayout?: SaveLayoutFn; //(pageid: string, pageProps: PageProps) => void;
+  componentMapProvider?: ComponentMapProvider;
+  componentPropsProvider?: ComponentPropsProvider;
+  gobackList: GoBackListFn; //() => void
 }) {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const responsiveDrawerWidth = isMobile ? "100%" : drawerWidth;
+
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState(pageMode || "edit");
-  const [pageProps, setPageProps] = useState<PageProps>(getDefaultPageProps())
-  const [reload, setReload] = useState(0);
+  const [pageProps, setPageProps] = useState<PageProps>(getDefaultPageProps());
 
   const [resetKey, setResetKey] = useState(0);
   const [initialOptions, setInitialOptions] =
@@ -157,7 +167,9 @@ export function StackPage({
   const [currentLayout, setCurrentLayout] = useState<
     GridStackOptions | GridStackWidget[] | undefined
   >();
-  const [hiddenHeader, setHiddenHeader] = useState(pageProps?.hiddenWidgetHeader || false);
+  const [hiddenHeader, setHiddenHeader] = useState(
+    pageProps?.hiddenWidgetHeader || false
+  );
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -190,21 +202,37 @@ export function StackPage({
     setOpen(false);
   };
 
+  useEffect(() => {
+    if (pageid) {
+      const fetchPage = async () => {
+        try {
+          await handleReloadLayout();
+        } catch (error) {
+          console.error("Failed to fetch pages:", error);
+        }
+      };
+
+      fetchPage();
+    }
+  }, [pageid]);
+
   const handleLoadLayout = async (pageid: string): Promise<any> => {
     console.log("handleLoadLayout: " + pageid);
     const pageProps = (await onLoadLayout(pageid)) || getDefaultPageProps();
     setPageProps(pageProps);
     return pageProps.grids;
-  }
+  };
 
   const handleSaveLayout = async () => {
     try {
-      console.log("handleSaveLayout: " + pageid);
-      const layout = stackActionsRef.current?.saveLayout();
-      if (layout) {
-        pageProps.grids = layout;
-        await onSaveLayout(pageid, pageProps);
-        showFeedback("save", "Layout saved successfully!");
+      if (onSaveLayout) {
+        console.log("handleSaveLayout: " + pageid);
+        const layout = stackActionsRef.current?.saveLayout();
+        if (layout) {
+          pageProps.grids = layout;
+          await onSaveLayout(pageid, pageProps);
+          showFeedback("save", "Layout saved successfully!");
+        }
       }
     } catch (error) {
       showFeedback("save", "Failed to save layout!");
@@ -228,9 +256,16 @@ export function StackPage({
     setResetKey((prev) => prev + 1); // Force remount
   };
 
-  const handleCreateLayout = () => {};
+  const handleCreateLayout = () => {
+    handleClearLayout();
+    setPageProps(getDefaultPageProps());
+  };
 
-  const handleBack2List = () => {};
+  const handleBack2List = () => {
+    if(gobackList){
+      gobackList();
+    }
+  };
 
   const handleSwitchLayout = () => {
     if (mode === "edit") {
@@ -261,7 +296,7 @@ export function StackPage({
           ...dropEvent,
           content: JSON.stringify({
             name: dropEvent.name,
-            props: getComponentProps(onGetComponentProps)[dropEvent.name],
+            props: getComponentProps(componentPropsProvider)[dropEvent.name],
           }),
         }));
       } else {
@@ -274,7 +309,7 @@ export function StackPage({
         }));
       }
     }
-  }, [dropEvent]);
+  }, [dropEvent, componentPropsProvider]);
 
   return (
     <GridStackProvider key={resetKey} initialOptions={initialOptions}>
@@ -289,10 +324,10 @@ export function StackPage({
                 sx={{ flexGrow: 1 }}
                 component="div"
               >
-                Page Create
+                {pageProps.title || "Create Page"}
               </Typography>
 
-              <Tooltip title="Create new page">
+              <Tooltip title="Create Page">
                 <IconButton
                   color="inherit"
                   edge="end"
@@ -396,20 +431,30 @@ export function StackPage({
             <EditIcon onClick={() => handleSwitchLayout()} />
           </Fab>
         )}
-        <Main open={open} mode={mode}>
+        <Main
+          open={open}
+          mode={mode}
+          sx={{
+            marginRight: open ? 0 : `-${responsiveDrawerWidth}`,
+          }}
+        >
           {isPageEditMode() && <DrawerHeader></DrawerHeader>}
           <StackActions ref={stackActionsRef} />
           <GridStackRenderProvider onGridStackDropEvent={handleDropEvent}>
-            <GridStackRender componentMap={getComponentMap(onGetComponentMap)} hiddenHeader={hiddenHeader} />
+            <GridStackRender
+              componentMap={getComponentMap(componentMapProvider)}
+              hiddenHeader={hiddenHeader}
+            />
           </GridStackRenderProvider>
         </Main>
         {isPageEditMode() && (
           <Drawer
             sx={{
-              width: drawerWidth,
+              width: open && isMobile ? 0 : responsiveDrawerWidth,
               flexShrink: 0,
               "& .MuiDrawer-paper": {
-                width: drawerWidth,
+                width: responsiveDrawerWidth,
+                boxSizing: "border-box",
               },
             }}
             variant="persistent"
@@ -428,7 +473,10 @@ export function StackPage({
             <Divider />
             <DeleteDropZone onDropDelete={() => {}} />
             <Divider />
-            <GridStackToolbar componentMap={getComponentMap(onGetComponentMap)} />
+            <GridStackToolbar
+              componentMap={getComponentMap(componentMapProvider)}
+              componentProps={getComponentProps(componentPropsProvider)}
+            />
           </Drawer>
         )}
         <PageInfoDialogs

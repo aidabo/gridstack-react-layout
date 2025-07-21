@@ -31,6 +31,7 @@ export function GridStackItemMenu({
 
   const handleDelete = () => {
     removeWidget(widgetId);
+    gridStack?.removeWidget(widgetId);
     handleClose();
   };
 
