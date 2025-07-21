@@ -202,6 +202,13 @@ export default function StackPage({
     setOpen(false);
   };
 
+  const handleLoadLayout = async (pageid: string): Promise<any> => {
+    console.log("handleLoadLayout: " + pageid);
+    const pageProps = (await onLoadLayout(pageid)) || getDefaultPageProps();
+    setPageProps(pageProps);
+    return pageProps.grids;
+  };
+
   useEffect(() => {
     if (pageid) {
       const fetchPage = async () => {
@@ -211,17 +218,12 @@ export default function StackPage({
           console.error("Failed to fetch pages:", error);
         }
       };
-
       fetchPage();
+    }else {
+      setPageProps(getDefaultPageProps());
     }
   }, [pageid]);
 
-  const handleLoadLayout = async (pageid: string): Promise<any> => {
-    console.log("handleLoadLayout: " + pageid);
-    const pageProps = (await onLoadLayout(pageid)) || getDefaultPageProps();
-    setPageProps(pageProps);
-    return pageProps.grids;
-  };
 
   const handleSaveLayout = async () => {
     try {

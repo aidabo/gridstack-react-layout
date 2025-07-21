@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         element: <PageList />,
       },
       {
-        path: "edit/:pageid",
+        path: "edit/:pageid?",
         element: <StackPageEdit />,
       },
       {

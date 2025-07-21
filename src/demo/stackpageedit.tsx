@@ -20,10 +20,7 @@ export default function StackPageEdit() {
     pageid: string,
     pageProps: PageProps
   ) => {
-    if (pageid != pageProps.id) {
-      throw Error("Error for page saving!");
-    }
-    await savePage(pageProps);
+    await savePage(pageProps);    
   };
 
   const loadLayout: LoadLayoutFn = async (

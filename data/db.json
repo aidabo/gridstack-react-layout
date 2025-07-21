@@ -404,6 +404,259 @@
           }
         ]
       }
+    },
+    {
+      "id": "page-c315d563-8e52-46fa-a7fa-1fbb41efba2b",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 1,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1100
+            },
+            {
+              "c": 6,
+              "w": 950
+            },
+            {
+              "c": 3,
+              "w": 850
+            },
+            {
+              "c": 1,
+              "w": 700
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 700
+              },
+              {
+                "c": 3,
+                "w": 850
+              },
+              {
+                "c": 6,
+                "w": 950
+              },
+              {
+                "c": 8,
+                "w": 1100
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 3,
+          "cellHeight": 50
+        },
+        "cellHeight": 50,
+        "children": [
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-nfff02swsx",
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 4,
+            "id": "widget-6mz40rppl79",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 8,
+            "id": "widget-8e8avfut675",
+            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-f6350a87-190d-4eed-a5be-85fb9e1f66c5",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 1,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1100
+            },
+            {
+              "c": 6,
+              "w": 950
+            },
+            {
+              "c": 3,
+              "w": 850
+            },
+            {
+              "c": 1,
+              "w": 700
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 700
+              },
+              {
+                "c": 3,
+                "w": 850
+              },
+              {
+                "c": 6,
+                "w": 950
+              },
+              {
+                "c": 8,
+                "w": 1100
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 3,
+          "cellHeight": 50
+        },
+        "cellHeight": 50,
+        "children": [
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-xm0ymncbkwh",
+            "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 5,
+            "y": 0,
+            "id": "widget-w3uklq60v7",
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 4,
+            "id": "widget-4dhfxzsl2zx",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 5,
+            "y": 4,
+            "id": "widget-dcy1jr4oyha",
+            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-cf7a2dc5-61bb-4caf-9e33-e420b34a67d9",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 1,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1100
+            },
+            {
+              "c": 6,
+              "w": 950
+            },
+            {
+              "c": 3,
+              "w": 850
+            },
+            {
+              "c": 1,
+              "w": 700
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 700
+              },
+              {
+                "c": 3,
+                "w": 850
+              },
+              {
+                "c": 6,
+                "w": 950
+              },
+              {
+                "c": 8,
+                "w": 1100
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 3,
+          "cellHeight": 50
+        },
+        "cellHeight": 50,
+        "children": [
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-jidrxq5hp4",
+            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          }
+        ]
+      }
     }
   ]
 }
