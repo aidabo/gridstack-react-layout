@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef} from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -35,7 +35,7 @@ import {
 } from "../../lib";
 import { getComponentMap, getComponentProps } from "./stackcomponents";
 import { GridStackOptions, GridStackWidget } from "gridstack";
-import { gridOptions, subGridOptions, PageProps, ComponentProps } from "./stackoptions";
+import { gridOptions, subGridOptions, PageProps, ComponentProps, getDefaultPageProps } from "./stackoptions";
 
 import StackActions, { StackActionsRef } from "./stackactions";
 import DeleteDropZone from "./deletedropzone";
@@ -122,29 +122,30 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export function StackPage({
+  pageid,
   pageMode,
-  pageProps,
   onSaveLayout,
   onLoadLayout,
   onGetComponentMap,
   onGetComponentProps,
 }: {
+  pageid: string;
   pageMode: "edit" | "read" | "preview";
-  pageProps: PageProps;
   onSaveLayout: (
     pageid: string,
-    layout: GridStackOptions | GridStackWidget[] | undefined
+    pageProps: PageProps
   ) => void;
   onLoadLayout: (
     pageid: string
-  ) => Promise<GridStackOptions | GridStackWidget[] | undefined>;
+  ) => Promise<PageProps>;
   onGetComponentMap?: () => ComponentMap;
   onGetComponentProps?: () => ComponentProps;
 }) {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState(pageMode || "edit");
-  const [pageid, setPageid] = useState(pageProps.id);
+  const [pageProps, setPageProps] = useState<PageProps>(getDefaultPageProps())
+  const [reload, setReload] = useState(0);
 
   const [resetKey, setResetKey] = useState(0);
   const [initialOptions, setInitialOptions] =
@@ -156,7 +157,7 @@ export function StackPage({
   const [currentLayout, setCurrentLayout] = useState<
     GridStackOptions | GridStackWidget[] | undefined
   >();
-  const [hiddenHeader, setHiddenHeader] = useState(pageProps.hiddenWidgetHeader);
+  const [hiddenHeader, setHiddenHeader] = useState(pageProps?.hiddenWidgetHeader || false);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -177,8 +178,6 @@ export function StackPage({
     }, 3000);
   };
 
-  useEffect(() => {}, [mode]);
-
   const isPageEditMode = () => {
     return mode === "edit";
   };
@@ -193,15 +192,18 @@ export function StackPage({
 
   const handleLoadLayout = async (pageid: string): Promise<any> => {
     console.log("handleLoadLayout: " + pageid);
-    return (await onLoadLayout(pageid)) || gridOptions;
-  };
+    const pageProps = (await onLoadLayout(pageid)) || getDefaultPageProps();
+    setPageProps(pageProps);
+    return pageProps.grids;
+  }
 
   const handleSaveLayout = async () => {
     try {
       console.log("handleSaveLayout: " + pageid);
       const layout = stackActionsRef.current?.saveLayout();
       if (layout) {
-        await onSaveLayout(pageid, layout);
+        pageProps.grids = layout;
+        await onSaveLayout(pageid, pageProps);
         showFeedback("save", "Layout saved successfully!");
       }
     } catch (error) {
@@ -211,8 +213,9 @@ export function StackPage({
 
   const handleReloadLayout = async () => {
     try {
-      const pageGridOptions = await handleLoadLayout(pageid);
-      setInitialOptions(pageGridOptions);
+      //setReload((prev) => prev + 1); //Force reload
+      const gridOptions = await handleLoadLayout(pageid);
+      setInitialOptions(gridOptions);
       setResetKey((prev) => prev + 1); // Force remount
       showFeedback("reload", "Layout reloaded!");
     } catch (error) {
@@ -231,6 +234,7 @@ export function StackPage({
 
   const handleSwitchLayout = () => {
     if (mode === "edit") {
+      //save layout
       setCurrentLayout(stackActionsRef.current?.saveLayout());
       setMode("preview");
     } else if (mode === "preview") {

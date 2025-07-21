@@ -3,7 +3,16 @@ import { ComponentProps } from "./stackoptions"
 
 import Text from "../widgets/Text"
 import Counter from "../widgets/Counter";
-import Image from "../widgets/Image";
+
+const defaultComponentProps: ComponentProps =  {
+  Text: { content: "", title: "This is Text" },
+  Counter: { initialCount: 0, title: "This is Counter"},
+}
+
+const defaultComponents: ComponentMap = {  
+  Text,
+  Counter,
+};
 
 export const getComponentMap = (fn?: () => ComponentMap): ComponentMap => {
   if (fn) {
@@ -14,7 +23,7 @@ export const getComponentMap = (fn?: () => ComponentMap): ComponentMap => {
   return defaultComponents;
 };
 
-export const getComponentProps = (fn?: () => object): CompProps => {
+export const getComponentProps = (fn?: () => object): ComponentProps => {
   if (fn) {
     const customObject = fn();
     // Merge with custom keys overriding defaults
@@ -24,15 +33,5 @@ export const getComponentProps = (fn?: () => object): CompProps => {
 };
 
 
-const defaultComponents: ComponentMap = {  
-  Text,
-  Counter,
-  Image,
-};
 
-const defaultComponentProps: ComponentProps =  {
-  Text: { content: "", title: "This is Text" },
-  Counter: { initialCount: 0, title: "This is Counter"},
-  Image: {src: "https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png", title: "This is Image"},
-}
 

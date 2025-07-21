@@ -63,6 +63,7 @@ export interface PageProps {
   tag?: string;
   status?: string;
   hiddenWidgetHeader?: boolean,
+  pageControl?: any
   grids:  GridStackOptions | GridStackWidget[] | undefined;
 }
 

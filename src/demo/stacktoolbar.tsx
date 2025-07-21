@@ -129,7 +129,7 @@ export default function GridStackToolbar({
                         <AddIcon />
                       </IconButton>
                     </div>
-                    <div>{key}</div>
+                    <div style={{marginTop: 5}}>{key}</div>
                   </div>
                 </Box>
               </Grid>

@@ -4050,6 +4050,194 @@
           }
         ]
       }
+    },
+    {
+      "id": "0d12725c-48ec-4619-820d-0e5f569b42da",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 1,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1100
+            },
+            {
+              "c": 6,
+              "w": 950
+            },
+            {
+              "c": 3,
+              "w": 850
+            },
+            {
+              "c": 1,
+              "w": 700
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 700
+              },
+              {
+                "c": 3,
+                "w": 850
+              },
+              {
+                "c": 6,
+                "w": 950
+              },
+              {
+                "c": 8,
+                "w": 1100
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 3,
+          "cellHeight": 50
+        },
+        "cellHeight": 50,
+        "children": [
+          {
+            "w": 12,
+            "x": 0,
+            "y": 0,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "minRow": 1,
+              "alwaysShowResizeHandle": false,
+              "column": "auto",
+              "layout": "list",
+              "margin": 8,
+              "cellHeight": 50,
+              "children": []
+            },
+            "children": [],
+            "id": "sub-grid-wcxnmbtr5d"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 1,
+            "id": "widget-ni8h6o44nf",
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 6,
+            "y": 1,
+            "id": "widget-juug5vbi5k",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 5,
+            "id": "widget-eu1z5r4w3qc",
+            "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "0665a1fa-cf47-4d89-97a5-151c75e917ae",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 1,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1100
+            },
+            {
+              "c": 6,
+              "w": 950
+            },
+            {
+              "c": 3,
+              "w": 850
+            },
+            {
+              "c": 1,
+              "w": 700
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 700
+              },
+              {
+                "c": 3,
+                "w": 850
+              },
+              {
+                "c": 6,
+                "w": 950
+              },
+              {
+                "c": 8,
+                "w": 1100
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 3,
+          "cellHeight": 50
+        },
+        "cellHeight": 50,
+        "children": [
+          {
+            "name": "Text",
+            "id": "widget-pqvwgbcdqk",
+            "x": 6,
+            "y": 0,
+            "w": 4,
+            "h": 4,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "name": "Counter",
+            "id": "widget-0dacnppjc4wh",
+            "x": 8,
+            "y": 4,
+            "w": 4,
+            "h": 4,
+            "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
+          }
+        ]
+      }
     }
   ]
 }
