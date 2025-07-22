@@ -52,7 +52,7 @@ export function GridStackRender(props: { componentMap: ComponentMap, hiddenHeade
 
         if (!widgetContainer) return null;
 
-        const title = componentData.props?.title || `Widget ${id.slice(0,4)}`;
+        const title = (componentData.props as any)?.title || `Widget ${id.slice(0,4)}`;
 
         return (
           <GridStackWidgetContext.Provider key={id} value={{ widget: { id } }}>

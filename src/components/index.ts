@@ -1,5 +1,6 @@
 import StackPage from "./stackpage"
-import {
+import { ComponentMap } from "../../lib";
+import {    
   ComponentProps,
   PageProps,
   ComponentMapProvider, 
@@ -13,6 +14,7 @@ export {
     StackPage,
     type PageProps,
     type ComponentProps,
+    type ComponentMap,
     type ComponentMapProvider,
     type ComponentPropsProvider,
     type GoBackListFn,

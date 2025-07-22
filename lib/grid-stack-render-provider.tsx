@@ -69,7 +69,7 @@ export function GridStackRenderProvider(
       //     //console.log((item as any)?.el);
       //   });        
       // })
-      grid.on('dropped', function(event, previousNode, newNode) {        
+      grid.on('dropped', function(_event, _previousNode, newNode) {
         if (newNode) {
           // Remove the node that gridstack added
           const el: any = newNode.el;

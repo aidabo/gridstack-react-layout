@@ -22,7 +22,7 @@ export default function GridStackToolbar({
   const [value, setValue] = React.useState("widget");
   const { addWidget, addSubGrid } = useGridStackContext();
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (_event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 

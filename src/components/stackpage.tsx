@@ -167,9 +167,7 @@ export default function StackPage({
   const [currentLayout, setCurrentLayout] = useState<
     GridStackOptions | GridStackWidget[] | undefined
   >();
-  const [hiddenHeader, setHiddenHeader] = useState(
-    pageProps?.hiddenWidgetHeader || false
-  );
+  const [hiddenHeader, setHiddenHeader] = useState(false);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -189,6 +187,14 @@ export default function StackPage({
       }));
     }, 3000);
   };
+
+  useEffect(() =>{
+    if (mode === 'read' || mode === 'preview') {
+      setHiddenHeader(true);
+    }else{
+      setHiddenHeader(false);
+    }
+  }, [mode])
 
   const isPageEditMode = () => {
     return mode === "edit";

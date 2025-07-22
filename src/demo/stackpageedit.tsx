@@ -20,6 +20,9 @@ export default function StackPageEdit() {
     pageid: string,
     pageProps: PageProps
   ) => {
+    if(pageid !== pageProps.id) {
+      console.log("new page created: " + pageProps.id);
+    }
     await savePage(pageProps);    
   };
 

@@ -63,7 +63,7 @@
           {
             "h": 4,
             "w": 4,
-            "x": 2,
+            "x": 0,
             "y": 0,
             "id": "widget-5rzu1cx37r",
             "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
@@ -71,84 +71,84 @@
           {
             "name": "Text",
             "id": "widget-3zhxwunjqw6",
-            "x": 6,
+            "x": 4,
             "y": 0,
-            "w": 4,
+            "w": 2,
             "h": 4,
             "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
           },
           {
             "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 4,
+            "w": 3,
+            "x": 6,
+            "y": 0,
             "id": "widget-rep92t7h2zr",
             "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
           },
           {
+            "h": 7,
+            "w": 3,
+            "x": 0,
+            "y": 4,
+            "id": "widget-3r34uzm4b36",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
             "name": "Image",
             "id": "widget-xkr81tk54y",
-            "x": 4,
+            "x": 3,
             "y": 4,
-            "w": 4,
-            "h": 4,
+            "w": 3,
+            "h": 7,
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
             "name": "Counter",
             "id": "widget-9zmazfucpzd",
-            "x": 8,
+            "x": 6,
             "y": 4,
-            "w": 4,
-            "h": 4,
+            "w": 3,
+            "h": 5,
             "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 8,
-            "id": "widget-3r34uzm4b36",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 12,
-            "id": "widget-7kqvqcop0ce",
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 16,
-            "id": "widget-g5nh8tiz0m",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 20,
-            "id": "widget-0vwv301hr6lk",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
             "name": "Image",
             "id": "widget-5j9dda2qzq",
+            "x": 6,
+            "y": 9,
+            "w": 4,
+            "h": 10,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 11,
+            "id": "widget-7kqvqcop0ce",
+            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          },
+          {
+            "h": 9,
+            "w": 4,
+            "x": 0,
+            "y": 15,
+            "id": "widget-g5nh8tiz0m",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 4,
             "x": 0,
             "y": 24,
-            "w": 4,
-            "h": 4,
+            "id": "widget-0vwv301hr6lk",
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
             "name": "Counter",
             "id": "widget-2b2843hwdap",
             "x": 0,
-            "y": 28,
+            "y": 33,
             "w": 4,
             "h": 4,
             "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
@@ -654,6 +654,128 @@
             "y": 0,
             "id": "widget-jidrxq5hp4",
             "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-26b957d5-08ce-4c20-aff5-7262595e00ca",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 1,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1100
+            },
+            {
+              "c": 6,
+              "w": 950
+            },
+            {
+              "c": 3,
+              "w": 850
+            },
+            {
+              "c": 1,
+              "w": 700
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 700
+              },
+              {
+                "c": 3,
+                "w": 850
+              },
+              {
+                "c": 6,
+                "w": 950
+              },
+              {
+                "c": 8,
+                "w": 1100
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 3,
+          "cellHeight": 50
+        },
+        "cellHeight": 50,
+        "children": [
+          {
+            "h": 7,
+            "w": 12,
+            "x": 0,
+            "y": 0,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "minRow": 1,
+              "alwaysShowResizeHandle": false,
+              "animate": false,
+              "column": "auto",
+              "layout": "list",
+              "margin": 8,
+              "cellHeight": 50,
+              "children": [
+                {
+                  "name": "Image",
+                  "id": "widget-91c4v4tqynf",
+                  "w": 5,
+                  "h": 7,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 0,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-yl1ng2a7mn"
+          },
+          {
+            "name": "Image",
+            "id": "widget-4mys476uk96",
+            "x": 0,
+            "y": 7,
+            "w": 4,
+            "h": 9,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "name": "Text",
+            "id": "widget-fquj7xjjpeg",
+            "x": 4,
+            "y": 7,
+            "w": 3,
+            "h": 8,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-8010b8vryi6",
+            "x": 8,
+            "y": 7,
+            "w": 4,
+            "h": 8,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           }
         ]
       }

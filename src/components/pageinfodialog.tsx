@@ -64,9 +64,9 @@ export default function PageInfoDialogs({
         <IconButton
           aria-label="share"
           onClick={handleCopy}
-          sx={(theme) => ({
+          sx={{
             marginLeft: "30px",            
-          })}
+          }}
         >
           <ShareIcon /> 
           {copy && <Typography>copied</Typography>}

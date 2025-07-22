@@ -64,7 +64,7 @@ export interface PageProps {
   image?: string;
   tag?: string;
   status?: string;
-  hiddenWidgetHeader?: boolean,
+  //hiddenWidgetHeader?: boolean,
   pageControl?: any
   grids:  GridStackOptions | GridStackWidget[] | undefined;
 }

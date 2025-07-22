@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Add below your Text component
-function Counter({ initialCount, title }: { initialCount: number, title?: string }) {
+function Counter({ initialCount }: { initialCount: number }) {
   const [count, setCount] = useState(initialCount);
 
   return (
