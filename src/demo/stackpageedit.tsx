@@ -20,10 +20,10 @@ export default function StackPageEdit() {
     pageid: string,
     pageProps: PageProps
   ) => {
+    await savePage(pageProps);
     if(pageid !== pageProps.id) {
-      console.log("new page created: " + pageProps.id);
+      navigate(`/edit/${pageProps.id}`);
     }
-    await savePage(pageProps);    
   };
 
   const loadLayout: LoadLayoutFn = async (

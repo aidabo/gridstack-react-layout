@@ -153,9 +153,6 @@ export default function StackPage({
 
   const [dropEvent, setDropEvent] = useState<GridStackDropEvent>();
   const [showGridInfo, setShowGridInfo] = useState(false);
-  const [currentLayout, setCurrentLayout] = useState<
-    GridStackOptions | GridStackWidget[] | undefined
-  >();
   const [showMenubar /*setShowMenubar*/] = useState(false);
 
   const [actionFeedback, setActionFeedback] = useState({

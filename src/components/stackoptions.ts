@@ -17,15 +17,15 @@ const BREAKPOINTS = [
 export const gridOptions: GridStackOptions = {
   acceptWidgets: true,
   removable: "#trash",
-  //sizeToContent: true,
-  minRow: 3,
+  sizeToContent: true,
+  minRow: 5,
   columnOpts: {
     breakpointForWindow: true,
     breakpoints: BREAKPOINTS,
     layout: "moveScale",
     columnMax: 12,
   },
-  margin: 8,
+  margin: 5,
   cellHeight: CELL_HEIGHT,
 
   subGridOpts: {
@@ -35,7 +35,7 @@ export const gridOptions: GridStackOptions = {
       breakpoints: BREAKPOINTS,
       layout: "moveScale",
     },
-    margin: 8,
+    margin: 5,
     minRow: 1,
     cellHeight: CELL_HEIGHT,
   },
@@ -45,14 +45,15 @@ export const gridOptions: GridStackOptions = {
 export const subGridOptions: GridStackOptions = {
   acceptWidgets: true,
   removable: "#trash",
-  //sizeToContent: true,
+  sizeToContent: true,
   subGridOpts: {
     acceptWidgets: true,
+    removable: "#trash",
     columnOpts: {
       breakpoints: BREAKPOINTS,
       layout: "moveScale",
     },
-    margin: 8,
+    margin: 5,
     minRow: 1,
     cellHeight: CELL_HEIGHT,
     children: [],
