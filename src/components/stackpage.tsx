@@ -32,7 +32,7 @@ import {
   GridStackProvider,
   GridStackRender,
   GridStackRenderProvider,
-} from "../../lib";
+} from "../lib";
 import { GridStackOptions, GridStackWidget } from "gridstack";
 import {
   gridOptions,
@@ -41,16 +41,16 @@ import {
   getDefaultPageProps,
   getComponentMap,
   getComponentProps,
-  ComponentMapProvider, 
+  ComponentMapProvider,
   ComponentPropsProvider,
   GoBackListFn,
   LoadLayoutFn,
-  SaveLayoutFn
+  SaveLayoutFn,
 } from "./stackoptions";
 
 import StackActions, { StackActionsRef } from "./stackactions";
 import DeleteDropZone from "./deletedropzone";
-import { GridStackDropEvent } from "../../lib/grid-stack-render-provider";
+import { GridStackDropEvent } from "../lib/grid-stack-render-provider";
 import PageInfoDialogs from "./pageinfodialog";
 
 import "./index.css";
@@ -61,40 +61,29 @@ const Main = styled("main", {
   shouldForwardProp: (prop) => prop !== "open" && prop !== "mode",
 })<{
   open?: boolean;
-  mode?: "read" | "edit" | "preview"; // Add pageMode prop
-}>(({ theme }) => ({
+  mode?: "read" | "edit" | "preview";
+}>(({ theme, open, mode }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
+  position: "relative",
+
+  // Default transitions for all modes
   transition: theme.transitions.create("margin", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  marginRight: -drawerWidth, // Default value
-  position: "relative",
-  variants: [
-    {
-      props: { open: true },
-      style: {
-        transition: theme.transitions.create("margin", {
-          easing: theme.transitions.easing.easeOut,
-          duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginRight: 0,
-      },
-    },
-    {
-      props: { mode: "read" },
-      style: {
-        marginRight: 0,
-      },
-    },
-    {
-      props: { mode: "preview" },
-      style: {
-        marginRight: 0,
-      },
-    },
-  ],
+
+  // Only apply desktop drawer behavior in edit mode
+  ...(mode === "edit" &&
+    open && {
+      transition: theme.transitions.create("margin", {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+    }),
+
+  // Reset margin for non-edit modes and mobile
+  marginRight: 0,
 }));
 
 interface AppBarProps extends MuiAppBarProps {
@@ -150,8 +139,8 @@ export default function StackPage({
   gobackList: GoBackListFn; //() => void
 }) {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const responsiveDrawerWidth = isMobile ? "100%" : drawerWidth;
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Correct hook
+  const responsiveDrawerWidth = isMobile ? "100%" : drawerWidth; // Dynamic width
 
   const [open, setOpen] = useState(false);
   const [mode, setMode] = useState(pageMode || "edit");
@@ -167,7 +156,7 @@ export default function StackPage({
   const [currentLayout, setCurrentLayout] = useState<
     GridStackOptions | GridStackWidget[] | undefined
   >();
-  const [hiddenHeader, setHiddenHeader] = useState(false);
+  const [showMenubar, setShowMenubar] = useState(false);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -185,16 +174,8 @@ export default function StackPage({
         ...prev,
         [action]: { ...prev[action], show: false },
       }));
-    }, 3000);
+    }, 2000);
   };
-
-  useEffect(() =>{
-    if (mode === 'read' || mode === 'preview') {
-      setHiddenHeader(true);
-    }else{
-      setHiddenHeader(false);
-    }
-  }, [mode])
 
   const isPageEditMode = () => {
     return mode === "edit";
@@ -225,11 +206,10 @@ export default function StackPage({
         }
       };
       fetchPage();
-    }else {
+    } else {
       setPageProps(getDefaultPageProps());
     }
   }, [pageid]);
-
 
   const handleSaveLayout = async () => {
     try {
@@ -249,7 +229,6 @@ export default function StackPage({
 
   const handleReloadLayout = async () => {
     try {
-      //setReload((prev) => prev + 1); //Force reload
       const gridOptions = await handleLoadLayout(pageid);
       setInitialOptions(gridOptions);
       setResetKey((prev) => prev + 1); // Force remount
@@ -270,19 +249,21 @@ export default function StackPage({
   };
 
   const handleBack2List = () => {
-    if(gobackList){
+    if (gobackList) {
       gobackList();
     }
   };
 
   const handleSwitchLayout = () => {
     if (mode === "edit") {
-      //save layout
       setCurrentLayout(stackActionsRef.current?.saveLayout());
+      //setShowMenubar(false);
+      setResetKey((prev) => prev + 1); // Force remount
       setMode("preview");
     } else if (mode === "preview") {
       setInitialOptions(currentLayout as any);
-      setResetKey((prev) => prev + 1);
+      //setShowMenubar(true);
+      setResetKey((prev) => prev + 1); // Force remount
       setMode("edit");
     }
   };
@@ -443,7 +424,10 @@ export default function StackPage({
           open={open}
           mode={mode}
           sx={{
-            marginRight: open ? 0 : `-${responsiveDrawerWidth}`,
+             marginRight:
+              mode === "edit" && !isMobile && !open
+                ? `-${drawerWidth}px`
+                : 0
           }}
         >
           {isPageEditMode() && <DrawerHeader></DrawerHeader>}
@@ -451,14 +435,16 @@ export default function StackPage({
           <GridStackRenderProvider onGridStackDropEvent={handleDropEvent}>
             <GridStackRender
               componentMap={getComponentMap(componentMapProvider)}
-              hiddenHeader={hiddenHeader}
+              showMenubar={showMenubar}
             />
           </GridStackRenderProvider>
         </Main>
         {isPageEditMode() && (
           <Drawer
             sx={{
-              width: open && isMobile ? 0 : responsiveDrawerWidth,
+              // On mobile: full width when open, hidden when closed
+              // On desktop: fixed width always 'unset' 
+              width: isMobile ? (open ? "unset" : 0) : drawerWidth,
               flexShrink: 0,
               "& .MuiDrawer-paper": {
                 width: responsiveDrawerWidth,
