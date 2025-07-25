@@ -156,7 +156,7 @@ export default function StackPage({
   const [currentLayout, setCurrentLayout] = useState<
     GridStackOptions | GridStackWidget[] | undefined
   >();
-  const [showMenubar, setShowMenubar] = useState(false);
+  const [showMenubar, /*setShowMenubar*/] = useState(false);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -443,7 +443,7 @@ export default function StackPage({
           <Drawer
             sx={{
               // On mobile: full width when open, hidden when closed
-              // On desktop: fixed width always 'unset' 
+              // On desktop: fixed width always 'unset'
               width: isMobile ? (open ? "unset" : 0) : drawerWidth,
               flexShrink: 0,
               "& .MuiDrawer-paper": {

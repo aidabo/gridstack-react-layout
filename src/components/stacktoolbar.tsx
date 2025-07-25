@@ -9,7 +9,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { Divider, IconButton } from "@mui/material";
 import { v4 as uuidv4 } from "uuid";
 
-import { ComponentMap, useGridStackContext } from "../../lib";
+import { ComponentMap, useGridStackContext } from "../lib";
 import { subGridOptions, ComponentProps } from "./stackoptions";
 
 export default function GridStackToolbar({

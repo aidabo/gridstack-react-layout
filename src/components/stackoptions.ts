@@ -1,22 +1,24 @@
 import { GridStackOptions, GridStackWidget } from "gridstack";
 import { v4 as uuidv4 } from "uuid";
-import { ComponentMap } from "../../lib";
+import { ComponentMap } from "../lib";
 import Text from "./Text"
 
-const CELL_HEIGHT = 50;
+const CELL_HEIGHT = "2rem"; //32px;
 
 const BREAKPOINTS = [
-  { c: 1, w: 700 },
-  { c: 3, w: 850 },
-  { c: 6, w: 950 },
-  { c: 8, w: 1100 },
+      { c: 1, w: 300 },   // 1 column on screens < 300px
+      { c: 2, w: 500 },   // 2 columns between 300px - 500px
+      { c: 4, w: 800 },   // 4 columns between 500px - 800px
+      { c: 6, w: 1024 },  // 6 columns between 800px - 1024px
+      { c: 8, w: 1200 },  // 8 columns on screens > 1200px
 ];
 
 // Initial grid options
 export const gridOptions: GridStackOptions = {
   acceptWidgets: true,
   removable: "#trash",
-  minRow: 1,
+  //sizeToContent: true,
+  minRow: 3,
   columnOpts: {
     breakpointForWindow: true,
     breakpoints: BREAKPOINTS,
@@ -25,14 +27,16 @@ export const gridOptions: GridStackOptions = {
   },
   margin: 8,
   cellHeight: CELL_HEIGHT,
+
   subGridOpts: {
     acceptWidgets: true,
+    removable: "#trash",
     columnOpts: {
       breakpoints: BREAKPOINTS,
       layout: "moveScale",
     },
     margin: 8,
-    minRow: 3,
+    minRow: 1,
     cellHeight: CELL_HEIGHT,
   },
   children: [],
@@ -64,7 +68,7 @@ export interface PageProps {
   image?: string;
   tag?: string;
   status?: string;
-  //hiddenWidgetHeader?: boolean,
+  showMenubar?: boolean,
   pageControl?: any
   grids:  GridStackOptions | GridStackWidget[] | undefined;
 }

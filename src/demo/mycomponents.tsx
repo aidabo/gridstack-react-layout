@@ -1,4 +1,4 @@
-import { ComponentMap } from "../../lib";
+import { ComponentMap } from "../lib";
 import { ComponentProps } from "../components/stackoptions";
 
 import Image from "../widgets/Image";

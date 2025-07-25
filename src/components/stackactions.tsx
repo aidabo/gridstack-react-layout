@@ -1,5 +1,5 @@
 import { forwardRef, useImperativeHandle } from "react";
-import { useGridStackContext } from "../../lib";
+import { useGridStackContext } from "../lib";
 import { GridStackOptions, GridStackWidget } from "gridstack";
 
 export type StackActionsRef = {
@@ -21,7 +21,7 @@ const StackActions = forwardRef<StackActionsRef>((_, ref) => {
       return saveOptions();
     },
     addWidget,
-    addSubGrid
+    addSubGrid,
   }));
 
   return null;

@@ -88,8 +88,12 @@ export function GridStackRenderProvider(
           }
           grid.removeWidget(el, true);
         }
-
       })
+      // .on('resize', function(event, el) {
+      //     let n = el.gridstackNode;
+      //     let rec = el.getBoundingClientRect();
+      //     console.log(`resize ${n.content || ''} size: (${n.w}x${n.h}) = (${Math.round(rec.width)}x${Math.round(rec.height)})px`);
+      // })
 
       return grid;
     }
