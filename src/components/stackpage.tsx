@@ -156,7 +156,7 @@ export default function StackPage({
   const [currentLayout, setCurrentLayout] = useState<
     GridStackOptions | GridStackWidget[] | undefined
   >();
-  const [showMenubar, /*setShowMenubar*/] = useState(false);
+  const [showMenubar /*setShowMenubar*/] = useState(false);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -254,19 +254,23 @@ export default function StackPage({
     }
   };
 
-  const handleSwitchLayout = () => {
-    if (mode === "edit") {
-      setCurrentLayout(stackActionsRef.current?.saveLayout());
-      //setShowMenubar(false);
-      setResetKey((prev) => prev + 1); // Force remount
-      setMode("preview");
-    } else if (mode === "preview") {
-      setInitialOptions(currentLayout as any);
-      //setShowMenubar(true);
-      setResetKey((prev) => prev + 1); // Force remount
-      setMode("edit");
-    }
+  const handlerSwitchMode = (newMode: "edit" | "read" | "preview") => {
+    setMode(newMode);
   };
+
+  // const handleSwitchLayout = () => {
+  //   if (mode === "edit") {
+  //     setCurrentLayout(stackActionsRef.current?.saveLayout());
+  //     //setShowMenubar(false);
+  //     setResetKey((prev) => prev + 1); // Force remount
+  //     setMode("preview");
+  //   } else if (mode === "preview") {
+  //     setInitialOptions(currentLayout as any);
+  //     //setShowMenubar(true);
+  //     setResetKey((prev) => prev + 1); // Force remount
+  //     setMode("edit");
+  //   }
+  // };
 
   const handleDropEvent = (event: GridStackDropEvent) => {
     setDropEvent(event);
@@ -355,7 +359,7 @@ export default function StackPage({
 
               <Tooltip
                 title="Preview page"
-                onClick={() => handleSwitchLayout()}
+                onClick={() => handlerSwitchMode("preview")}
               >
                 <IconButton color="inherit" edge="end">
                   <PreviewIcon sx={{ marginX: 1 }} />
@@ -417,17 +421,15 @@ export default function StackPage({
               zIndex: 1200,
             }}
           >
-            <EditIcon onClick={() => handleSwitchLayout()} />
+            <EditIcon onClick={() => handlerSwitchMode("edit")} />
           </Fab>
         )}
         <Main
           open={open}
           mode={mode}
           sx={{
-             marginRight:
-              mode === "edit" && !isMobile && !open
-                ? `-${drawerWidth}px`
-                : 0
+            marginRight:
+              mode === "edit" && !isMobile && !open ? `-${drawerWidth}px` : 0,
           }}
         >
           {isPageEditMode() && <DrawerHeader></DrawerHeader>}
