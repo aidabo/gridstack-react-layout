@@ -53,38 +53,37 @@ export function GridStackRender(props: {
         const WidgetComponent = props.componentMap[componentData.name];
         const widgetContainer = getWidgetContainer(id);
 
-        if (!widgetContainer) return null;
+        if (!widgetContainer || !WidgetComponent) return null;
 
         const title =
           (componentData.props as any)?.title || `Widget ${id.slice(0, 4)}`;
 
         return (
           <GridStackWidgetContext.Provider key={id} value={{ widget: { id } }}>
-            {!props.showMenubar &&
-              createPortal(
-                <WidgetComponent {...componentData.props} />,
-                widgetContainer
-              )}
-
-            {props.showMenubar &&
-              createPortal(
-                <div className="w-full h-full flex flex-col">
-                  {/* Header row with title and menu */}
-                  {props.showMenubar && (
-                    <div className="widget-header flex items-center justify-between bg-gray-100 border-b px-2 py-1 min-h-[36px]">
-                      <div className="font-medium truncate text-sm px-6">
-                        {title}
-                      </div>
-                      <GridStackItemMenu widgetId={id} />
+            {/* Portal content must include a measurable container when showMenubar is true */}
+            {createPortal(
+              !props.showMenubar ? (
+                // Case 1: No menu bar — just the component
+                  <WidgetComponent {...componentData.props} />
+              ) : (
+                // Case 2: Show menu bar and structured layout
+                <div className="gridstack-measured-container w-full h-auto flex flex-col">
+                  {/* Header */}
+                  <div className="widget-header flex items-center justify-between bg-gray-100 border-b px-2 py-1 min-h-[36px]">
+                    <div className="font-medium truncate text-sm px-1">
+                      {title}
                     </div>
-                  )}
-                  {/* Widget content area */}
-                  <div className="flex-1 min-h-0 relative">
+                    <GridStackItemMenu widgetId={id} />
+                  </div>
+
+                  {/* Content container: must have measurable height */}
+                  <div className="widget-body flex-1 min-h-[40px]">
                     <WidgetComponent {...componentData.props} />
                   </div>
-                </div>,
-                widgetContainer
-              )}
+                </div>
+              ),
+              widgetContainer
+            )}
           </GridStackWidgetContext.Provider>
         );
       })}
