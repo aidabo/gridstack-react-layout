@@ -6,7 +6,12 @@ import {
   useRef,
 } from "react";
 import { useGridStackContext } from "./grid-stack-context";
-import { GridStack, GridStackOptions, GridStackWidget } from "gridstack";
+import {
+  GridItemHTMLElement,
+  GridStack,
+  GridStackOptions,
+  GridStackWidget,
+} from "gridstack";
 import { GridStackRenderContext } from "./grid-stack-render-context";
 import isEqual from "react-fast-compare";
 import { v4 as uuidv4 } from "uuid";
@@ -22,11 +27,23 @@ export interface GridStackDropEvent {
 
 export type GridStackDropEventCallback = (event: GridStackDropEvent) => void;
 
-export function GridStackRenderProvider(
-  { 
-    children, 
-    onGridStackDropEvent
-  }:  PropsWithChildren<{ onGridStackDropEvent?: GridStackDropEventCallback }>) {
+// Override the default resizeToContent method to ensure content.firstChildElement is null error, 
+// because resizeToContent called by GridStack before React DOM mounted and rendered
+const originalResizeToContent = GridStack.prototype.resizeToContent;
+GridStack.prototype.resizeToContent = function(el: GridItemHTMLElement) {
+  const content = el.querySelector('.grid-stack-item-content');
+  const first = content?.firstElementChild;
+  if (!first) {
+    // Silently skip
+    return;
+  }
+  return originalResizeToContent.call(this, el);
+};
+
+export function GridStackRenderProvider({
+  children,
+  onGridStackDropEvent,
+}: PropsWithChildren<{ onGridStackDropEvent?: GridStackDropEventCallback }>) {
   const {
     _gridStack: { value: gridStack, set: setGridStack },
     initialOptions,
@@ -55,7 +72,7 @@ export function GridStackRenderProvider(
       GridStack.setupDragIn(".grid-stack-item-widget", {
         appendTo: "body",
         helper: "clone",
-        scroll: false
+        scroll: false,
       });
 
       // grid.on('added removed change', function(event, items) {
@@ -64,31 +81,31 @@ export function GridStackRenderProvider(
       //   console.log((items[0].grid.opts.id) + ' ' + event.type + ' ' + items.length + ' items (x,y w h):' + str );
       // })
       // grid.on('removed', function(event, items) {
-      //   items.forEach(function(item) { 
+      //   items.forEach(function(item) {
       //     //grid.removeWidget((item as any)?.el, true)
       //     //console.log((item as any)?.el);
-      //   });        
+      //   });
       // })
-      grid.on('dropped', function(_event, _previousNode, newNode) {
+      grid.on("dropped", function (_event, _previousNode, newNode) {
         if (newNode) {
           // Remove the node that gridstack added
           const el: any = newNode.el;
           const type: string = el.dataset.gsType;
           if (type && onGridStackDropEvent) {
-              const dropEvent: GridStackDropEvent = { 
-                name: type, 
-                id: uuidv4(),
-                x: newNode.x || 0,    
-                y: newNode.y || 0,
-                w: 4, 
-                h: 4 
-              }
-              //console.log("drop event", dropEvent);
-              onGridStackDropEvent(dropEvent);
+            const dropEvent: GridStackDropEvent = {
+              name: type,
+              id: uuidv4(),
+              x: newNode.x || 0,
+              y: newNode.y || 0,
+              w: 4,
+              h: 4,
+            };
+            //console.log("drop event", dropEvent);
+            onGridStackDropEvent(dropEvent);
           }
           grid.removeWidget(el, true);
         }
-      })
+      });
       // .on('resize', function(event, el) {
       //     let n = el.gridstackNode;
       //     let rec = el.getBoundingClientRect();
