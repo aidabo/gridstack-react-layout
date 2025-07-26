@@ -153,7 +153,7 @@ export default function StackPage({
 
   const [dropEvent, setDropEvent] = useState<GridStackDropEvent>();
   const [showGridInfo, setShowGridInfo] = useState(false);
-  const [showMenubar /*setShowMenubar*/] = useState(false);
+  const [showMenubar /*setShowMenubar*/] = useState(true);
 
   const [actionFeedback, setActionFeedback] = useState({
     save: { show: false, message: "" },
@@ -221,7 +221,7 @@ export default function StackPage({
     }
   }, [pageid, handleReloadLayout]);
 
-  const handleSaveLayout = async () => {
+  const handleSaveLayout = async (message?: string) => {
     try {
       if (onSaveLayout) {
         const layout = stackActionsRef.current?.saveLayout();
@@ -229,7 +229,7 @@ export default function StackPage({
           pageProps.grids = layout;
           console.log("Saving layout:", pageProps.id, pageid);
           await onSaveLayout(pageid, pageProps);
-          showFeedback("save", "Layout saved successfully!");
+          showFeedback("save", message || "Layout saved successfully!");
         }
       }
     } catch (error) {
@@ -245,7 +245,7 @@ export default function StackPage({
   const handleCreateLayout = async() => {
     await handleClearLayout();
     setPageProps(getDefaultPageProps());
-    await handleSaveLayout()
+    await handleSaveLayout("New page created!");
   };
 
   const handleBackToList = () => {
@@ -281,7 +281,7 @@ export default function StackPage({
         }));
       } else {
         stackActionsRef.current.addSubGrid((_id /*, withWidget: any*/) => ({
-          h: 3,
+          h: 4,
           w: 12,
           x: 0,
           y: 0,

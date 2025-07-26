@@ -87,7 +87,8 @@ export const getDefaultPageProps = (): PageProps => {
 };
 
 const defaultComponentProps: ComponentProps =  {
-  Text: { content: `This is a Text component providing text dynamically and render it in page.`, title: "This is Text" },
+  Text: { content: `Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.
+Even better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.`, title: "This is Text" },
 }
 
 const defaultComponents: ComponentMap = {  

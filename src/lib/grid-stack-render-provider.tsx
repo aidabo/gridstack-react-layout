@@ -75,17 +75,6 @@ export function GridStackRenderProvider({
         scroll: false,
       });
 
-      // grid.on('added removed change', function(event, items) {
-      //   let str = '';
-      //   items.forEach(function(item) { str += ' (' + item.x + ',' + item.y + ' ' + item.w + 'x' + item.h + ')'; });
-      //   console.log((items[0].grid.opts.id) + ' ' + event.type + ' ' + items.length + ' items (x,y w h):' + str );
-      // })
-      // grid.on('removed', function(event, items) {
-      //   items.forEach(function(item) {
-      //     //grid.removeWidget((item as any)?.el, true)
-      //     //console.log((item as any)?.el);
-      //   });
-      // })
       grid.on("dropped", function (_event, _previousNode, newNode) {
         if (newNode) {
           // Remove the node that gridstack added
@@ -100,17 +89,14 @@ export function GridStackRenderProvider({
               w: 4,
               h: 4,
             };
-            //console.log("drop event", dropEvent);
             onGridStackDropEvent(dropEvent);
+            //remove el.gridstackNode from gridstack
+            //add by callback
+            grid.removeWidget(el, true);
           }
-          grid.removeWidget(el, true);
+          //if drag from subGrid, that's OK,           
         }
       });
-      // .on('resize', function(event, el) {
-      //     let n = el.gridstackNode;
-      //     let rec = el.getBoundingClientRect();
-      //     console.log(`resize ${n.content || ''} size: (${n.w}x${n.h}) = (${Math.round(rec.width)}x${Math.round(rec.height)})px`);
-      // })
 
       return grid;
     }
