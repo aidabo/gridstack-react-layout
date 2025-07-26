@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useGridStackContext } from "./grid-stack-context";
 import { useGridStackRenderContext } from "./grid-stack-render-context";
@@ -39,6 +40,66 @@ function parseWeightMetaToComponentData(
   };
 }
 
+export function GridStackWidgetRenderer({
+  id,
+  meta,
+  WidgetComponent,
+  widgetContainer,
+  showMenubar,
+}: {
+  id: string;
+  meta: GridStackWidget;
+  WidgetComponent: ComponentType<any>;
+  widgetContainer: HTMLElement;
+  showMenubar?: boolean;
+}) {
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const componentData = parseWeightMetaToComponentData(meta);
+
+  const title =
+    (componentData.props as any)?.title || `Widget ${id.slice(0, 4)}`;
+
+  // Trigger resizeToContent after mount
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    const el = widgetContainer.closest(".grid-stack-item");
+    if (!el || !(el as any).gridstackNode?.grid || !wrapper) return;
+
+    const observer = new ResizeObserver(() => {
+      (el as any).gridstackNode.grid.resizeToContent(el);
+    });
+
+    observer.observe(wrapper);
+    (el as any).gridstackNode.grid.resizeToContent(el); // initial
+
+    return () => observer.disconnect();
+  }, [widgetContainer]);
+
+  const content = (
+    <div
+      ref={wrapperRef}
+      className="gridstack-measured-container"
+      style={{ width: "100%" }}
+    >
+      {showMenubar && (
+        <div className="widget-header flex items-center justify-between bg-gray-100 border-b px-2 min-h-[36px]">
+          <div className="font-medium truncate text-sm px-1">{title}</div>
+          <GridStackItemMenu widgetId={id} />
+        </div>
+      )}
+      <div className="widget-body flex-1 min-h-[40px]">
+        <WidgetComponent {...componentData.props} />
+      </div>
+    </div>
+  );
+
+  return (
+    <GridStackWidgetContext.Provider value={{ widget: { id } }}>
+      {createPortal(content, widgetContainer)}
+    </GridStackWidgetContext.Provider>
+  );
+}
+
 export function GridStackRender(props: {
   componentMap: ComponentMap;
   showMenubar?: boolean;
@@ -55,36 +116,15 @@ export function GridStackRender(props: {
 
         if (!widgetContainer || !WidgetComponent) return null;
 
-        const title =
-          (componentData.props as any)?.title || `Widget ${id.slice(0, 4)}`;
-
         return (
-          <GridStackWidgetContext.Provider key={id} value={{ widget: { id } }}>
-            {/* Portal content must include a measurable container when showMenubar is true */}
-            {createPortal(
-              !props.showMenubar ? (
-                // Case 1: No menu bar — just the component
-                  <WidgetComponent {...componentData.props} />
-              ) : (
-                // Case 2: Show menu bar and structured layout
-                <div className="gridstack-measured-container w-full h-auto flex flex-col">
-                  {/* Header */}
-                  <div className="widget-header flex items-center justify-between bg-gray-100 border-b px-2 py-1 min-h-[36px]">
-                    <div className="font-medium truncate text-sm px-1">
-                      {title}
-                    </div>
-                    <GridStackItemMenu widgetId={id} />
-                  </div>
-
-                  {/* Content container: must have measurable height */}
-                  <div className="widget-body flex-1 min-h-[40px]">
-                    <WidgetComponent {...componentData.props} />
-                  </div>
-                </div>
-              ),
-              widgetContainer
-            )}
-          </GridStackWidgetContext.Provider>
+          <GridStackWidgetRenderer
+            key={id}
+            id={id}
+            meta={meta}
+            WidgetComponent={WidgetComponent}
+            widgetContainer={widgetContainer}
+            showMenubar={props.showMenubar}
+          />
         );
       })}
     </>

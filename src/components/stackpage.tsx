@@ -189,13 +189,13 @@ export default function StackPage({
     setOpen(false);
   };
 
-  const handleLoadLayout = async (pageid: string): Promise<any> => {
+  const handleLoadLayout = useCallback(async (pageid: string): Promise<any> => {
     const pageProps = (await onLoadLayout(pageid)) || getDefaultPageProps();
     setPageProps(pageProps);
     return pageProps.grids;
-  };
+  }, [onLoadLayout]);
 
-  const handleReloadLayout = async () => {
+  const handleReloadLayout = useCallback(async () => {
     try {
       const gridOptions = await handleLoadLayout(pageid);
       setInitialOptions(gridOptions);
@@ -204,7 +204,7 @@ export default function StackPage({
     } catch (error) {
       showFeedback("reload", "Reload failed!");
     }
-  };
+  },[pageid, handleLoadLayout, showFeedback]);
 
   useEffect(() => {
     if (pageid) {
@@ -219,7 +219,7 @@ export default function StackPage({
     } else {
       setPageProps(getDefaultPageProps());
     }
-  }, [pageid]);
+  }, [pageid, handleReloadLayout]);
 
   const handleSaveLayout = async () => {
     try {
@@ -242,12 +242,13 @@ export default function StackPage({
     setResetKey((prev) => prev + 1); // Force remount
   };
 
-  const handleCreateLayout = () => {
-    handleClearLayout();
+  const handleCreateLayout = async() => {
+    await handleClearLayout();
     setPageProps(getDefaultPageProps());
+    await handleSaveLayout()
   };
 
-  const handleBack2List = () => {
+  const handleBackToList = () => {
     if (gobackList) {
       gobackList();
     }
@@ -376,7 +377,7 @@ export default function StackPage({
 
               <Tooltip
                 title="Back to page list"
-                onClick={() => handleBack2List()}
+                onClick={() => handleBackToList()}
               >
                 <IconButton color="inherit" edge="end">
                   <ArrowBackIcon sx={{ marginLeft: 1, marginRight: 2 }} />

@@ -6,101 +6,56 @@
       "grids": {
         "acceptWidgets": true,
         "removable": "#trash",
-        "minRow": 1,
+        "sizeToContent": true,
+        "minRow": 5,
         "columnOpts": {
           "breakpointForWindow": true,
           "breakpoints": [
             {
-              "c": 8,
-              "w": 1100
-            },
-            {
               "c": 6,
-              "w": 950
+              "w": 1024
             },
             {
               "c": 3,
-              "w": 850
+              "w": 800
             },
             {
               "c": 1,
-              "w": 700
+              "w": 500
             }
           ],
           "layout": "moveScale",
           "columnMax": 12
         },
-        "margin": 8,
+        "margin": 5,
         "subGridOpts": {
           "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
           "columnOpts": {
             "breakpoints": [
               {
                 "c": 1,
-                "w": 700
+                "w": 500
               },
               {
                 "c": 3,
-                "w": 850
+                "w": 800
               },
               {
                 "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
+                "w": 1024
               }
             ],
             "layout": "moveScale"
           },
-          "margin": 8,
+          "margin": 5,
           "minRow": 1,
-          "cellHeight": 50
+          "cellHeight": "2rem"
         },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 6,
-            "x": 0,
-            "y": 0,
-            "id": "widget-b651p7pte9h",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-            "w": 3
-          },
-          {
-            "h": 9,
-            "w": 4,
-            "x": 3,
-            "y": 0,
-            "id": "widget-4myumiplcqw",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 9,
-            "x": 7,
-            "y": 0,
-            "id": "widget-amy50ip5bon",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-            "w": 4
-          },
-          {
-            "h": 9,
-            "w": 4,
-            "x": 0,
-            "y": 9,
-            "id": "widget-rcb1zgjo6co",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 6,
-            "x": 4,
-            "y": 9,
-            "id": "widget-eg9f79blh7a",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-            "w": 2
-          }
-        ]
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
       }
     },
     {
@@ -222,79 +177,56 @@
       "grids": {
         "acceptWidgets": true,
         "removable": "#trash",
-        "minRow": 1,
+        "sizeToContent": true,
+        "minRow": 5,
         "columnOpts": {
           "breakpointForWindow": true,
           "breakpoints": [
             {
-              "c": 8,
-              "w": 1100
-            },
-            {
               "c": 6,
-              "w": 950
+              "w": 1024
             },
             {
               "c": 3,
-              "w": 850
+              "w": 800
             },
             {
               "c": 1,
-              "w": 700
+              "w": 500
             }
           ],
           "layout": "moveScale",
           "columnMax": 12
         },
-        "margin": 8,
+        "margin": 5,
         "subGridOpts": {
           "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
           "columnOpts": {
             "breakpoints": [
               {
                 "c": 1,
-                "w": 700
+                "w": 500
               },
               {
                 "c": 3,
-                "w": 850
+                "w": 800
               },
               {
                 "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
+                "w": 1024
               }
             ],
             "layout": "moveScale"
           },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
         },
-        "cellHeight": 50,
-        "children": [
-          {
-            "name": "Text",
-            "id": "widget-i0n9kw4p54s",
-            "x": 0,
-            "y": 0,
-            "w": 4,
-            "h": 4,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "name": "Image",
-            "id": "widget-s174gk1ib5e",
-            "x": 0,
-            "y": 4,
-            "w": 4,
-            "h": 4,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
       }
     },
     {
@@ -1117,6 +1049,1615 @@
             "x": 0,
             "y": 12,
             "id": "widget-vhtreem6lh",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-c5c0b49b-6821-4de1-9b95-eae6d914b125",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 10,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1200
+            },
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 4,
+              "w": 800
+            },
+            {
+              "c": 2,
+              "w": 500
+            },
+            {
+              "c": 1,
+              "w": 300
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 8,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 300
+              },
+              {
+                "c": 2,
+                "w": 500
+              },
+              {
+                "c": 4,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              },
+              {
+                "c": 8,
+                "w": 1200
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 8,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 18,
+            "w": 7,
+            "x": 0,
+            "y": 0,
+            "id": "widget-kzr4tiziyc",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 8,
+            "w": 3,
+            "x": 0,
+            "y": 18,
+            "id": "widget-8x66art0avv",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-9c123733-1a2a-425f-a329-b13804751c2c",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1200
+            },
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 4,
+              "w": 800
+            },
+            {
+              "c": 2,
+              "w": 500
+            },
+            {
+              "c": 1,
+              "w": 300
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 300
+              },
+              {
+                "c": 2,
+                "w": 500
+              },
+              {
+                "c": 4,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              },
+              {
+                "c": 8,
+                "w": 1200
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 17,
+            "w": 5,
+            "x": 0,
+            "y": 0,
+            "id": "widget-t999xkn9nwr",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 20,
+            "w": 6,
+            "x": 5,
+            "y": 0,
+            "id": "widget-1nzdzi1w7z5h",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 17,
+            "w": 5,
+            "x": 0,
+            "y": 17,
+            "id": "widget-2pbtmhl6y9x",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-0487fec3-df32-4feb-867c-228805467310",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1200
+            },
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 4,
+              "w": 800
+            },
+            {
+              "c": 2,
+              "w": 500
+            },
+            {
+              "c": 1,
+              "w": 300
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 300
+              },
+              {
+                "c": 2,
+                "w": 500
+              },
+              {
+                "c": 4,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              },
+              {
+                "c": 8,
+                "w": 1200
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 53,
+            "w": 8,
+            "x": 2,
+            "y": 0,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 1,
+              "alwaysShowResizeHandle": true,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 10,
+                  "w": 3,
+                  "id": "widget-zk293e37dwe",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 2,
+                  "y": 0
+                },
+                {
+                  "h": 10,
+                  "w": 3,
+                  "id": "widget-zk3utnlygk",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                },
+                {
+                  "h": 10,
+                  "w": 3,
+                  "id": "widget-u0x36dd8qu",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 2,
+                  "y": 0
+                },
+                {
+                  "h": 10,
+                  "w": 3,
+                  "id": "widget-2mpp3c3mwq4",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                },
+                {
+                  "h": 16,
+                  "w": 5,
+                  "id": "widget-abf2ahsg1tc",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 2,
+                  "y": 10
+                },
+                {
+                  "h": 16,
+                  "w": 5,
+                  "id": "widget-rvzujbc39xn",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 2,
+                  "y": 10
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-9veaunjddb"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-21027c48-3564-41ef-862b-bc927f2c934c",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1200
+            },
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 4,
+              "w": 800
+            },
+            {
+              "c": 2,
+              "w": 500
+            },
+            {
+              "c": 1,
+              "w": 300
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 300
+              },
+              {
+                "c": 2,
+                "w": 500
+              },
+              {
+                "c": 4,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              },
+              {
+                "c": 8,
+                "w": 1200
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 11,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-guaxrqnh0qn",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-69ba070e-8bd2-43b6-b7d8-a7b46e72749a",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1200
+            },
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 4,
+              "w": 800
+            },
+            {
+              "c": 2,
+              "w": 500
+            },
+            {
+              "c": 1,
+              "w": 300
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 300
+              },
+              {
+                "c": 2,
+                "w": 500
+              },
+              {
+                "c": 4,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              },
+              {
+                "c": 8,
+                "w": 1200
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-p0y8t3veb0h",
+            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 4,
+            "id": "widget-1dtlpiv8n0c",
+            "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 8,
+            "id": "widget-wnc8l65adt",
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 4,
+            "w": 4,
+            "x": 0,
+            "y": 12,
+            "id": "widget-j7puro2gc89",
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 2,
+            "w": 12,
+            "x": 0,
+            "y": 16,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 1,
+              "alwaysShowResizeHandle": true,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": []
+            },
+            "children": [],
+            "id": "sub-grid-7bcrtmftcx8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-6058cceb-dde0-466e-a44c-911db98be408",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 8,
+              "w": 1200
+            },
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 4,
+              "w": 800
+            },
+            {
+              "c": 2,
+              "w": 500
+            },
+            {
+              "c": 1,
+              "w": 300
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 300
+              },
+              {
+                "c": 2,
+                "w": 500
+              },
+              {
+                "c": 4,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              },
+              {
+                "c": 8,
+                "w": 1200
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 21,
+            "w": 12,
+            "x": 0,
+            "y": 0,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "minRow": 1,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 14,
+                  "w": 5,
+                  "id": "widget-3u0d29lmywc",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 12,
+                  "w": 4,
+                  "id": "widget-kyjewcgv1j7",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 5,
+                  "y": 0
+                },
+                {
+                  "h": 7,
+                  "w": 2,
+                  "id": "widget-x7z9h2ixpf",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 5,
+                  "y": 12
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-cv9l24elvcs"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-b3d43900-7e33-427e-b29a-e2220b60cc08",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 15,
+            "w": 12,
+            "x": 0,
+            "y": 0,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "column": "auto",
+              "cellHeightUnit": "rem",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 12,
+                  "w": 4,
+                  "id": "widget-r7qerkcixws",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 14,
+                  "w": 5,
+                  "id": "widget-24wlytal79r",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 4,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-0soj288q28ej"
+          },
+          {
+            "h": 9,
+            "w": 3,
+            "x": 0,
+            "y": 15,
+            "id": "widget-2grjud1ulv",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 16,
+            "w": 3,
+            "x": 3,
+            "y": 15,
+            "id": "widget-juerlmciu7",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 6,
+            "w": 2,
+            "x": 6,
+            "y": 15,
+            "id": "widget-zg8me2o3ex",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-87877592-042b-4a3a-aeba-6cf27f053988",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 12,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-e9gbm6bx44d",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 12,
+            "w": 5,
+            "x": 4,
+            "y": 0,
+            "id": "widget-ie7htfhd58g",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 16,
+            "w": 10,
+            "x": 1,
+            "y": 12,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "animate": false,
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeightUnit": "rem",
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 12,
+                  "w": 4,
+                  "id": "widget-tmo7hfm7ag",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 15,
+                  "w": 4,
+                  "id": "widget-uiw5m1xznb",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}",
+                  "x": 4,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-olx81s6qyw"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-f9276ba7-1480-436c-8d1a-b4b574f71d91",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 11,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-55burea3un9",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-379e6ca3-6543-44df-ad58-7b2606f7f5a4",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 10,
+            "w": 5,
+            "x": 0,
+            "y": 0,
+            "id": "widget-gicrbzqmgbl",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 3,
+            "w": 4,
+            "x": 0,
+            "y": 10,
+            "id": "widget-6l4ffbwmv1j",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-1a8a4293-940c-4035-8c19-aec930dff9ec",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
+      }
+    },
+    {
+      "id": "page-00fc18b1-f839-4713-b758-185e6cec338e",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
+      }
+    },
+    {
+      "id": "page-f0bfa77c-2ebe-4d17-970d-6c7e9a6ff57b",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 15,
+            "w": 6,
+            "x": 0,
+            "y": 0,
+            "id": "widget-2bu1mzq7o5u",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-0b089254-f332-430c-9d33-535e00935875",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
+      }
+    },
+    {
+      "id": "page-924a490b-e114-4513-9ab4-75dfd4c316f4",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 9,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-uf2mn47atw",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "page-0756be3d-2e62-462c-8383-0b0035f84b06",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
+      }
+    },
+    {
+      "id": "page-2da2cc38-1402-45d4-a972-a38601d7bc56",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
+      }
+    },
+    {
+      "id": "page-23ed55bd-d581-4a6b-90b5-a9748aaeaacb",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 13,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-7i2na3u4135",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 13,
+            "w": 4,
+            "x": 4,
+            "y": 0,
+            "id": "widget-9io88h1dlt",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 13,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-zszvmieejh",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 7,
+            "w": 2,
+            "x": 0,
+            "y": 13,
+            "id": "widget-0cnvum52p8zn",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 13,
+            "w": 4,
+            "x": 2,
+            "y": 13,
+            "id": "widget-y5lahfyzsdf",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 3,
+            "w": 4,
+            "x": 6,
+            "y": 13,
+            "id": "widget-7r11ddcep93",
+            "sizeToContent": true,
+            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
+          },
+          {
+            "h": 5,
+            "w": 4,
+            "x": 6,
+            "y": 16,
+            "id": "widget-ixbhxo405rk",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}"
+          },
+          {
+            "h": 13,
+            "w": 4,
+            "x": 6,
+            "y": 21,
+            "id": "widget-7y6tzctaond",
+            "sizeToContent": true,
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           }
         ]

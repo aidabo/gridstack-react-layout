@@ -31,6 +31,7 @@ export const gridOptions: GridStackOptions = {
   subGridOpts: {
     acceptWidgets: true,
     removable: "#trash",
+    sizeToContent: true,
     columnOpts: {
       breakpoints: BREAKPOINTS,
       layout: "moveScale",
