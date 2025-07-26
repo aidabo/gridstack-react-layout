@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -33,7 +33,7 @@ import {
   GridStackRender,
   GridStackRenderProvider,
 } from "../lib";
-import { GridStackOptions, GridStackWidget } from "gridstack";
+import { GridStackOptions } from "gridstack";
 import {
   gridOptions,
   subGridOptions,
@@ -160,19 +160,22 @@ export default function StackPage({
     reload: { show: false, message: "" },
   });
 
-  const showFeedback = (action: string, message: string) => {
-    setActionFeedback((prev) => ({
-      ...prev,
-      [action]: { show: true, message },
-    }));
-    // Auto-hide after 3 seconds
-    setTimeout(() => {
-      setActionFeedback((prev: any) => ({
+  const showFeedback = useCallback(
+    (action: string, message: string) => {
+      setActionFeedback((prev) => ({
         ...prev,
-        [action]: { ...prev[action], show: false },
+        [action]: { show: true, message },
       }));
-    }, 2000);
-  };
+      // Auto-hide after 3 seconds
+      setTimeout(() => {
+        setActionFeedback((prev: any) => ({
+          ...prev,
+          [action]: { ...prev[action], show: false },
+        }));
+      }, 2000);
+    },
+    [setActionFeedback]
+  );
 
   const isPageEditMode = () => {
     return mode === "edit";
@@ -187,10 +190,20 @@ export default function StackPage({
   };
 
   const handleLoadLayout = async (pageid: string): Promise<any> => {
-    console.log("handleLoadLayout: " + pageid);
     const pageProps = (await onLoadLayout(pageid)) || getDefaultPageProps();
     setPageProps(pageProps);
     return pageProps.grids;
+  };
+
+  const handleReloadLayout = async () => {
+    try {
+      const gridOptions = await handleLoadLayout(pageid);
+      setInitialOptions(gridOptions);
+      setResetKey((prev) => prev + 1); // Force remount
+      showFeedback("reload", "Layout reloaded!");
+    } catch (error) {
+      showFeedback("reload", "Reload failed!");
+    }
   };
 
   useEffect(() => {
@@ -211,27 +224,16 @@ export default function StackPage({
   const handleSaveLayout = async () => {
     try {
       if (onSaveLayout) {
-        console.log("handleSaveLayout: " + pageid);
         const layout = stackActionsRef.current?.saveLayout();
         if (layout) {
           pageProps.grids = layout;
+          console.log("Saving layout:", pageProps.id, pageid);
           await onSaveLayout(pageid, pageProps);
           showFeedback("save", "Layout saved successfully!");
         }
       }
     } catch (error) {
       showFeedback("save", "Failed to save layout!");
-    }
-  };
-
-  const handleReloadLayout = async () => {
-    try {
-      const gridOptions = await handleLoadLayout(pageid);
-      setInitialOptions(gridOptions);
-      setResetKey((prev) => prev + 1); // Force remount
-      showFeedback("reload", "Layout reloaded!");
-    } catch (error) {
-      showFeedback("reload", "Reload failed!");
     }
   };
 
@@ -255,20 +257,6 @@ export default function StackPage({
     setMode(newMode);
   };
 
-  // const handleSwitchLayout = () => {
-  //   if (mode === "edit") {
-  //     setCurrentLayout(stackActionsRef.current?.saveLayout());
-  //     //setShowMenubar(false);
-  //     setResetKey((prev) => prev + 1); // Force remount
-  //     setMode("preview");
-  //   } else if (mode === "preview") {
-  //     setInitialOptions(currentLayout as any);
-  //     //setShowMenubar(true);
-  //     setResetKey((prev) => prev + 1); // Force remount
-  //     setMode("edit");
-  //   }
-  // };
-
   const handleDropEvent = (event: GridStackDropEvent) => {
     setDropEvent(event);
   };
@@ -284,6 +272,7 @@ export default function StackPage({
       if (dropEvent.name !== "SubGrid") {
         stackActionsRef.current.addWidget((_id) => ({
           ...dropEvent,
+          sizeToContent: true, // Ensure the widget is sized to its content
           content: JSON.stringify({
             name: dropEvent.name,
             props: getComponentProps(componentPropsProvider)[dropEvent.name],
@@ -425,9 +414,11 @@ export default function StackPage({
           open={open}
           mode={mode}
           sx={{
+            padding: 0.5,
             marginRight:
               mode === "edit" && !isMobile && !open ? `-${drawerWidth}px` : 0,
           }}
+          className={`grid-stack-mode-${mode}`}
         >
           {isPageEditMode() && <DrawerHeader></DrawerHeader>}
           <StackActions ref={stackActionsRef} />
