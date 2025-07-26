@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/lib/grid-stack-Item-menu.tsx", "../09-sample_data/stackcomponents.tsx", "../09-sample_data/grid-stack-render copy.tsx"]
+  "include": ["src", "vite.config.ts", "vite-env.d.ts"],
 }
