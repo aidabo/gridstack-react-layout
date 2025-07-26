@@ -45,6 +45,7 @@ export default function GridStackToolbar({
       x: 0,
       y: 0,
       id: widgetId,
+      sizeToContent: true, // Ensure the widget is sized to its content
       content: JSON.stringify({
         name: key,
         props: componentProps[key],

@@ -14,13 +14,14 @@ export default function DeleteDropZone({ onDropDelete }: { onDropDelete: () => v
 
   return (
     <Container
+      id="trash"
       onDrop={handleDrop}
       onDragOver={handleDragOver}
       disableGutters
       sx={{
+        bgcolor: 'rgba(255, 205, 210, 0.5)', // light red background
         minHeight: '3.5rem',
-        height: '3.5rem',
-        width: '3.5rem',
+        height: '4.5rem',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -28,7 +29,6 @@ export default function DeleteDropZone({ onDropDelete }: { onDropDelete: () => v
       }}
     >
       <Avatar
-        id="trash"
         sx={{
           bgcolor: '#ffcdd2', // light red background
           width: '100%',
@@ -39,7 +39,8 @@ export default function DeleteDropZone({ onDropDelete }: { onDropDelete: () => v
       >
         <DeleteOutlineIcon
           sx={{
-            fontSize: '3.2rem',
+            fontSize: '3.5rem',
+            width: '3.5rem',
             color: 'rgba(100, 100, 100, 0.4)', // red icon
           }}
         />

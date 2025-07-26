@@ -2,16 +2,18 @@ import StackPage from "../components/stackpage";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   PageProps,
-  getDefaultPageProps,
   SaveLayoutFn,
   LoadLayoutFn,
   GoBackListFn,
 } from "../components/stackoptions";
 import { useLayoutStore } from "./api";
 import { useComponentProvider } from "./mycomponents";
+import { useState } from "react";
 
-export default function StackPageEdit() {
+export default function StackPageEdit(props: {mode: string}) {
   const { pageid } = useParams<{ pageid: string }>();
+  const [currentPageid, setCurrentPageid] = useState(pageid || "");
+
   const { getPageById, savePage } = useLayoutStore();
   const { getNewComponentMap, getNewComponentProps } = useComponentProvider();
   const navigate = useNavigate();
@@ -29,9 +31,10 @@ export default function StackPageEdit() {
   const loadLayout: LoadLayoutFn = async (
     pageid: string
   ): Promise<PageProps> => {
-    let page: any = await getPageById(pageid);
+    setCurrentPageid(pageid);
+    const page: any = await getPageById(pageid);
     if (page === false) {
-      page = getDefaultPageProps();
+      console.log("new page created: " + pageid);
     }
     return page;
   };
@@ -43,8 +46,8 @@ export default function StackPageEdit() {
   return (
     <>
       <StackPage
-        pageid={pageid as any}
-        pageMode="edit"
+        pageid={currentPageid as any}
+        pageMode={props.mode as any}
         onSaveLayout={saveLayout}
         onLoadLayout={loadLayout}
         componentMapProvider={getNewComponentMap}
