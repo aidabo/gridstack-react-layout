@@ -62,5 +62,23 @@
 .grid-stack-item-content > img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  aspect-ratio: auto;
+}
+
+.gridstack-measured-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-header {
+  background-color: rgba(220,220, 220, 0.8);
+}
+
+.widget-body {
+  flex: 1;
+  min-height: 40px;
+  padding: 0px;
 }

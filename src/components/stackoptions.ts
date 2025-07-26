@@ -6,11 +6,11 @@ import Text from "./Text"
 const CELL_HEIGHT = "2rem"; //32px;
 
 const BREAKPOINTS = [
-      { c: 1, w: 300 },   // 1 column on screens < 300px
-      { c: 2, w: 500 },   // 2 columns between 300px - 500px
-      { c: 4, w: 800 },   // 4 columns between 500px - 800px
+      //{ c: 1, w: 300 },   // 1 column on screens < 300px
+      { c: 1, w: 500 },   // 2 columns between 300px - 500px
+      { c: 3, w: 800 },   // 4 columns between 500px - 800px
       { c: 6, w: 1024 },  // 6 columns between 800px - 1024px
-      { c: 8, w: 1200 },  // 8 columns on screens > 1200px
+      //{ c: 8, w: 1200 },  // 8 columns on screens > 1200px
 ];
 
 // Initial grid options
@@ -54,7 +54,7 @@ export const subGridOptions: GridStackOptions = {
       layout: "moveScale",
     },
     margin: 5,
-    minRow: 1,
+    minRow: 3,
     cellHeight: CELL_HEIGHT,
     children: [],
   },
@@ -69,8 +69,7 @@ export interface PageProps {
   image?: string;
   tag?: string;
   status?: string;
-  showMenubar?: boolean,
-  pageControl?: any
+  pageOptions?: any
   grids:  GridStackOptions | GridStackWidget[] | undefined;
 }
 
@@ -87,8 +86,7 @@ export const getDefaultPageProps = (): PageProps => {
 };
 
 const defaultComponentProps: ComponentProps =  {
-  Text: { content: "", title: "This is Text" },
-  Counter: { initialCount: 0, title: "This is Counter"},
+  Text: { content: `This is a Text component providing text dynamically and render it in page.`, title: "This is Text" },
 }
 
 const defaultComponents: ComponentMap = {  
