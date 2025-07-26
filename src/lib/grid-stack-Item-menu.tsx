@@ -16,7 +16,7 @@ export interface GridStackItemMenuProps {
 export function GridStackItemMenu({ 
   widgetId,
 }: GridStackItemMenuProps) {    
-  const { removeWidget, gridStack } = useGridStackContext();
+  const { removeWidget } = useGridStackContext();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   
@@ -30,8 +30,13 @@ export function GridStackItemMenu({
   };
 
   const handleDelete = () => {
+    // remove component from the context
     removeWidget(widgetId);
-    gridStack?.removeWidget(widgetId);
+    // remove the widget from the gridstack
+     const el = document.querySelector(`[gs-id="${widgetId}"]`) as HTMLElement | null;
+    if (el && (el as any).gridstackNode?.grid) {
+      (el as any).gridstackNode.grid.removeWidget(el, true, true); // delete from correct GridStack
+    }
     handleClose();
   };
 
