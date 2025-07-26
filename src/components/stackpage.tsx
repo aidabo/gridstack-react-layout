@@ -281,7 +281,7 @@ export default function StackPage({
         }));
       } else {
         stackActionsRef.current.addSubGrid((_id /*, withWidget: any*/) => ({
-          h: 1,
+          h: 3,
           w: 12,
           x: 0,
           y: 0,

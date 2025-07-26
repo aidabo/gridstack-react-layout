@@ -56,7 +56,7 @@ export default function GridStackToolbar({
   const handleAddSubGrid = () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     addSubGrid((_id /*, withWidget*/) => ({
-      h: 1,
+      h: 3,
       w: 12,
       x: 0,
       y: 0,
