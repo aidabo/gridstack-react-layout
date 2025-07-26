@@ -1,16 +1,16 @@
 import { GridStackOptions, GridStackWidget } from "gridstack";
 import { v4 as uuidv4 } from "uuid";
 import { ComponentMap } from "../lib";
-import Text from "./Text"
+import Text from "./Text";
 
 const CELL_HEIGHT = "2rem"; //32px;
 
 const BREAKPOINTS = [
-      //{ c: 1, w: 300 },   // 1 column on screens < 300px
-      { c: 1, w: 500 },   // 2 columns between 300px - 500px
-      { c: 3, w: 800 },   // 4 columns between 500px - 800px
-      { c: 6, w: 1024 },  // 6 columns between 800px - 1024px
-      //{ c: 8, w: 1200 },  // 8 columns on screens > 1200px
+  //{ c: 1, w: 300 },   // 1 column on screens < 300px
+  { c: 1, w: 500 }, // 2 columns between 300px - 500px
+  { c: 3, w: 800 }, // 4 columns between 500px - 800px
+  { c: 6, w: 1024 }, // 6 columns between 800px - 1024px
+  //{ c: 8, w: 1200 },  // 8 columns on screens > 1200px
 ];
 
 // Initial grid options
@@ -62,7 +62,6 @@ export const subGridOptions: GridStackOptions = {
   children: [],
 };
 
-
 export interface PageProps {
   id: string;
   title: string;
@@ -70,8 +69,8 @@ export interface PageProps {
   image?: string;
   tag?: string;
   status?: string;
-  pageOptions?: any
-  grids:  GridStackOptions | GridStackWidget[] | undefined;
+  pageOptions?: any;
+  grids: GridStackOptions | GridStackWidget[] | undefined;
 }
 
 export interface ComponentProps {
@@ -82,16 +81,21 @@ export const getDefaultPageProps = (): PageProps => {
   return {
     id: `page-${uuidv4()}`,
     title: "untitled page",
-    grids: gridOptions
-  }
+    grids: gridOptions,
+  };
 };
 
-const defaultComponentProps: ComponentProps =  {
-  Text: { content: `Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.
-Even better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.`, title: "This is Text" },
-}
+const defaultComponentProps: ComponentProps = {
+  Text: {
+    content: `Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.
+Even better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.
+Some cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or \`\`\` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. 
+Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.`,
+    title: "This is text card",
+  },
+};
 
-const defaultComponents: ComponentMap = {  
+const defaultComponents: ComponentMap = {
   Text,
 };
 
@@ -107,7 +111,9 @@ export const getComponentMap = (fn?: ComponentMapProvider): ComponentMap => {
   return defaultComponents;
 };
 
-export const getComponentProps = (fn?: ComponentPropsProvider): ComponentProps => {
+export const getComponentProps = (
+  fn?: ComponentPropsProvider
+): ComponentProps => {
   if (fn) {
     const customObject = fn();
     // Merge with custom keys overriding defaults
@@ -116,11 +122,9 @@ export const getComponentProps = (fn?: ComponentPropsProvider): ComponentProps =
   return defaultComponentProps;
 };
 
-export type SaveLayoutFn = (pageid: string, pageProps: PageProps) => Promise<void>;
+export type SaveLayoutFn = (
+  pageid: string,
+  pageProps: PageProps
+) => Promise<void>;
 export type LoadLayoutFn = (pageid: string) => Promise<PageProps>;
 export type GoBackListFn = () => void;
-
-
-
-
-
