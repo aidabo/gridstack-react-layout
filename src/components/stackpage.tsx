@@ -304,10 +304,10 @@ export default function StackPage({
                 sx={{ flexGrow: 1 }}
                 component="div"
               >
-                {pageProps.title || "Create Page"}
+                {pageProps.title || "Untitled Page"}
               </Typography>
 
-              <Tooltip title="Create Page">
+              <Tooltip title="Create new page">
                 <IconButton
                   color="inherit"
                   edge="end"

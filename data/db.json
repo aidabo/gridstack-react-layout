@@ -119,54 +119,173 @@
         "cellHeight": 50,
         "children": [
           {
-            "h": 6,
-            "w": 4,
+            "h": 8,
+            "w": 5,
             "x": 0,
             "y": 0,
-            "id": "widget-yw5cxvcvr7q",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+            "id": "widget-dnvssfppfju",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\"}}"
           },
           {
-            "name": "Image",
-            "id": "widget-n612mwaqer",
-            "x": 4,
+            "name": "ImageCircle",
+            "id": "widget-vvnsxalpknf",
+            "x": 6,
             "y": 0,
-            "w": 4,
-            "h": 6,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+            "w": 2,
+            "h": 7,
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\"}}"
           },
           {
             "h": 6,
             "w": 4,
             "x": 8,
             "y": 0,
-            "id": "widget-9pqn5xeup8v",
+            "id": "widget-ldvobcabsfh",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 8,
+            "w": 4,
+            "x": 8,
+            "y": 6,
+            "id": "widget-4z2pl35bi7d",
+            "sizeToContent": true,
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
-            "h": 6,
-            "w": 4,
-            "x": 0,
-            "y": 6,
-            "id": "widget-o11h013jyl",
+            "h": 5,
+            "w": 2,
+            "x": 6,
+            "y": 7,
+            "id": "widget-4xzb1pnt2hd",
+            "sizeToContent": true,
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
             "name": "Image",
             "id": "widget-6uzasozqg5d",
-            "x": 4,
-            "y": 6,
-            "w": 4,
-            "h": 6,
+            "x": 0,
+            "y": 8,
+            "w": 2,
+            "h": 5,
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
             "h": 6,
             "w": 4,
-            "x": 8,
-            "y": 6,
-            "id": "widget-v1lrxzhd0wg",
+            "x": 2,
+            "y": 8,
+            "id": "widget-ts5q09v5gwh",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 5,
+            "w": 2,
+            "x": 0,
+            "y": 13,
+            "id": "widget-9pqn5xeup8v",
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 7,
+            "w": 3,
+            "x": 2,
+            "y": 14,
+            "id": "widget-uydzfctzn9",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "name": "ImageBlurred",
+            "id": "widget-yzkwsq7jxj",
+            "x": 5,
+            "y": 14,
+            "w": 4,
+            "h": 8,
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\"}}"
+          },
+          {
+            "h": 15,
+            "w": 8,
+            "x": 2,
+            "y": 22,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "animate": false,
+              "column": "auto",
+              "layout": "list",
+              "margin": 8,
+              "cellHeightUnit": "rem",
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 13,
+                  "w": 4,
+                  "id": "widget-djo0ejvob2r",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 0,
+                  "y": -2
+                },
+                {
+                  "h": 7,
+                  "w": 2,
+                  "id": "widget-x8zg34fsyyg",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": -13
+                },
+                {
+                  "h": 5,
+                  "w": 2,
+                  "id": "widget-j1qvrd7igu",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}",
+                  "x": 6,
+                  "y": -3
+                },
+                {
+                  "h": 7,
+                  "w": 2,
+                  "id": "widget-v1lrxzhd0wg",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 9,
+                  "y": -10
+                },
+                {
+                  "h": 4,
+                  "w": 6,
+                  "id": "widget-pxtimbjgq",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 5,
+                  "w": 8,
+                  "id": "widget-rkifailyp3r",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\",\"title\":\"This is Text\"}}",
+                  "x": 4,
+                  "y": 2
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-1lci5suecbu"
           }
         ]
       }
@@ -2587,80 +2706,7 @@
         },
         "cellHeightUnit": "rem",
         "cellHeight": 2,
-        "children": [
-          {
-            "h": 13,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-7i2na3u4135",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 13,
-            "w": 4,
-            "x": 4,
-            "y": 0,
-            "id": "widget-9io88h1dlt",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 13,
-            "w": 4,
-            "x": 8,
-            "y": 0,
-            "id": "widget-zszvmieejh",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 7,
-            "w": 2,
-            "x": 0,
-            "y": 13,
-            "id": "widget-0cnvum52p8zn",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 13,
-            "w": 4,
-            "x": 2,
-            "y": 13,
-            "id": "widget-y5lahfyzsdf",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 3,
-            "w": 4,
-            "x": 6,
-            "y": 13,
-            "id": "widget-7r11ddcep93",
-            "sizeToContent": true,
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          },
-          {
-            "h": 5,
-            "w": 4,
-            "x": 6,
-            "y": 16,
-            "id": "widget-ixbhxo405rk",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "h": 13,
-            "w": 4,
-            "x": 6,
-            "y": 21,
-            "id": "widget-7y6tzctaond",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
+        "children": []
       }
     }
   ]
