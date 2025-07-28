@@ -1,4 +1,4 @@
-import { ComponentMap } from "../lib";
+import { ComponentMap } from "..";
 import { ComponentProps } from "../components/stackoptions";
 
 import Image from "../widgets/Image";
@@ -127,11 +127,13 @@ const useComponentProvider = () => {
         date: "20 July 2022",
         author: "Sara Lamalo",
         alt: "Nature Image",
+        title: "This is ImageBlurred",
       },
 
       ImageCircle: {
         src: "https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
         alt: "Circle Image",
+        title: "This is ImageCircle",
       },
 
       SimpleCard: {
@@ -142,6 +144,7 @@ const useComponentProvider = () => {
         date: "20 July 2022",
         author: "Ai Dabo",
         caption: "This think item",
+        title: "This is SimpleCard",
       },
     };
   };

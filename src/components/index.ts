@@ -1,5 +1,5 @@
 import StackPage from "./stackpage"
-import { ComponentMap } from "../lib";
+import { ComponentMap } from "..";
 import {    
   ComponentProps,
   PageProps,

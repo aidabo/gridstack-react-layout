@@ -15,7 +15,7 @@ import { useLayoutStore } from "./api";
 export default function PageList() {
   const { getPageList, deletePage } = useLayoutStore();
   const [pages, setPages] = useState<PageProps[]>([]);
-  const navigate = useNavigate(); // Add navigation hook
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchPages = async () => {

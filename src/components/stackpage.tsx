@@ -32,7 +32,7 @@ import {
   GridStackProvider,
   GridStackRender,
   GridStackRenderProvider,
-} from "../lib";
+} from "..";
 import { GridStackOptions } from "gridstack";
 import {
   gridOptions,
@@ -53,7 +53,7 @@ import DeleteDropZone from "./deletedropzone";
 import { GridStackDropEvent } from "../lib/grid-stack-render-provider";
 import PageInfoDialogs from "./pageinfodialog";
 
-import "./index.css";
+import "../styles/index.css";
 
 const drawerWidth = 360;
 

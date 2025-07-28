@@ -1,5 +1,5 @@
 import { forwardRef, useImperativeHandle } from "react";
-import { useGridStackContext } from "../lib";
+import { useGridStackContext } from "..";
 import { GridStackOptions, GridStackWidget } from "gridstack";
 
 export type StackActionsRef = {

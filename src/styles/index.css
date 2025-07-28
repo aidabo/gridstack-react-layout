@@ -1,3 +1,13 @@
+@import 'gridstack/dist/gridstack.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; 
+
+/* Custom components layer */
+@layer components {
+  
+}
+
 /* @import 'tailwindcss/base'; */
 .grid-stack {
   background: rgba(240,240, 240, 0.9);

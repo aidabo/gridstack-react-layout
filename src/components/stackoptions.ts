@@ -1,6 +1,6 @@
 import { GridStackOptions, GridStackWidget } from "gridstack";
 import { v4 as uuidv4 } from "uuid";
-import { ComponentMap } from "../lib";
+import { ComponentMap } from "..";
 import Text from "./Text";
 
 const CELL_HEIGHT = "2rem"; //32px;

@@ -1,816 +1,6 @@
 {
   "pages": [
     {
-      "id": "page-4d9cc59b-cdf8-4d06-b2b8-16ac06be15d5",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "sizeToContent": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-2858e9fd-595b-4c58-848f-a5bdd3523db1",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 1,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1100
-            },
-            {
-              "c": 6,
-              "w": 950
-            },
-            {
-              "c": 3,
-              "w": 850
-            },
-            {
-              "c": 1,
-              "w": 700
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 700
-              },
-              {
-                "c": 3,
-                "w": 850
-              },
-              {
-                "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
-        },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 8,
-            "w": 5,
-            "x": 0,
-            "y": 0,
-            "id": "widget-dnvssfppfju",
-            "sizeToContent": true,
-            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\"}}"
-          },
-          {
-            "name": "ImageCircle",
-            "id": "widget-vvnsxalpknf",
-            "x": 6,
-            "y": 0,
-            "w": 2,
-            "h": 7,
-            "sizeToContent": true,
-            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\"}}"
-          },
-          {
-            "h": 6,
-            "w": 4,
-            "x": 8,
-            "y": 0,
-            "id": "widget-ldvobcabsfh",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
-          },
-          {
-            "h": 8,
-            "w": 4,
-            "x": 8,
-            "y": 6,
-            "id": "widget-4z2pl35bi7d",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 5,
-            "w": 2,
-            "x": 6,
-            "y": 7,
-            "id": "widget-4xzb1pnt2hd",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "name": "Image",
-            "id": "widget-6uzasozqg5d",
-            "x": 0,
-            "y": 8,
-            "w": 2,
-            "h": 5,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 6,
-            "w": 4,
-            "x": 2,
-            "y": 8,
-            "id": "widget-ts5q09v5gwh",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
-          },
-          {
-            "h": 5,
-            "w": 2,
-            "x": 0,
-            "y": 13,
-            "id": "widget-9pqn5xeup8v",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 7,
-            "w": 3,
-            "x": 2,
-            "y": 14,
-            "id": "widget-uydzfctzn9",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
-          },
-          {
-            "name": "ImageBlurred",
-            "id": "widget-yzkwsq7jxj",
-            "x": 5,
-            "y": 14,
-            "w": 4,
-            "h": 8,
-            "sizeToContent": true,
-            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\"}}"
-          },
-          {
-            "h": 15,
-            "w": 8,
-            "x": 2,
-            "y": 22,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "sizeToContent": true,
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "minRow": 3,
-              "alwaysShowResizeHandle": false,
-              "animate": false,
-              "column": "auto",
-              "layout": "list",
-              "margin": 8,
-              "cellHeightUnit": "rem",
-              "cellHeight": 2,
-              "children": [
-                {
-                  "h": 13,
-                  "w": 4,
-                  "id": "widget-djo0ejvob2r",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 0,
-                  "y": -2
-                },
-                {
-                  "h": 7,
-                  "w": 2,
-                  "id": "widget-x8zg34fsyyg",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 6,
-                  "y": -13
-                },
-                {
-                  "h": 5,
-                  "w": 2,
-                  "id": "widget-j1qvrd7igu",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}",
-                  "x": 6,
-                  "y": -3
-                },
-                {
-                  "h": 7,
-                  "w": 2,
-                  "id": "widget-v1lrxzhd0wg",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 9,
-                  "y": -10
-                },
-                {
-                  "h": 4,
-                  "w": 6,
-                  "id": "widget-pxtimbjgq",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}",
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 5,
-                  "w": 8,
-                  "id": "widget-rkifailyp3r",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\",\"title\":\"This is Text\"}}",
-                  "x": 4,
-                  "y": 2
-                }
-              ]
-            },
-            "children": [],
-            "id": "sub-grid-1lci5suecbu"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-6038ef1a-aad0-4e55-9f0e-4d62e96186f4",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "sizeToContent": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-e763b750-b58c-4d41-9f48-19d0224cd1fd",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 1,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1100
-            },
-            {
-              "c": 6,
-              "w": 950
-            },
-            {
-              "c": 3,
-              "w": 850
-            },
-            {
-              "c": 1,
-              "w": 700
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 700
-              },
-              {
-                "c": 3,
-                "w": 850
-              },
-              {
-                "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
-        },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-wokxrn3zrs8",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 4,
-            "id": "widget-h25wi0liaxp",
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          },
-          {
-            "h": 3,
-            "w": 4,
-            "x": 0,
-            "y": 8,
-            "id": "widget-ntj5cp81oio",
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-c315d563-8e52-46fa-a7fa-1fbb41efba2b",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 1,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1100
-            },
-            {
-              "c": 6,
-              "w": 950
-            },
-            {
-              "c": 3,
-              "w": 850
-            },
-            {
-              "c": 1,
-              "w": 700
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 700
-              },
-              {
-                "c": 3,
-                "w": 850
-              },
-              {
-                "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
-        },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-nfff02swsx",
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 4,
-            "id": "widget-6mz40rppl79",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 8,
-            "id": "widget-8e8avfut675",
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-f6350a87-190d-4eed-a5be-85fb9e1f66c5",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 1,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1100
-            },
-            {
-              "c": 6,
-              "w": 950
-            },
-            {
-              "c": 3,
-              "w": 850
-            },
-            {
-              "c": 1,
-              "w": 700
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 700
-              },
-              {
-                "c": 3,
-                "w": 850
-              },
-              {
-                "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
-        },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-xm0ymncbkwh",
-            "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 5,
-            "y": 0,
-            "id": "widget-w3uklq60v7",
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 4,
-            "id": "widget-4dhfxzsl2zx",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 5,
-            "y": 4,
-            "id": "widget-dcy1jr4oyha",
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-cf7a2dc5-61bb-4caf-9e33-e420b34a67d9",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 1,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1100
-            },
-            {
-              "c": 6,
-              "w": 950
-            },
-            {
-              "c": 3,
-              "w": 850
-            },
-            {
-              "c": 1,
-              "w": 700
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 700
-              },
-              {
-                "c": 3,
-                "w": 850
-              },
-              {
-                "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
-        },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-jidrxq5hp4",
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-26b957d5-08ce-4c20-aff5-7262595e00ca",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 1,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1100
-            },
-            {
-              "c": 6,
-              "w": 950
-            },
-            {
-              "c": 3,
-              "w": 850
-            },
-            {
-              "c": 1,
-              "w": 700
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 700
-              },
-              {
-                "c": 3,
-                "w": 850
-              },
-              {
-                "c": 6,
-                "w": 950
-              },
-              {
-                "c": 8,
-                "w": 1100
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 3,
-          "cellHeight": 50
-        },
-        "cellHeight": 50,
-        "children": [
-          {
-            "h": 7,
-            "w": 12,
-            "x": 0,
-            "y": 0,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "minRow": 1,
-              "alwaysShowResizeHandle": false,
-              "animate": false,
-              "column": "auto",
-              "layout": "list",
-              "margin": 8,
-              "cellHeight": 50,
-              "children": [
-                {
-                  "name": "Image",
-                  "id": "widget-91c4v4tqynf",
-                  "w": 5,
-                  "h": 7,
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 0,
-                  "y": 0
-                }
-              ]
-            },
-            "children": [],
-            "id": "sub-grid-yl1ng2a7mn"
-          },
-          {
-            "name": "Image",
-            "id": "widget-4mys476uk96",
-            "x": 0,
-            "y": 7,
-            "w": 4,
-            "h": 9,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "name": "Text",
-            "id": "widget-fquj7xjjpeg",
-            "x": 4,
-            "y": 7,
-            "w": 3,
-            "h": 8,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "name": "Image",
-            "id": "widget-8010b8vryi6",
-            "x": 8,
-            "y": 7,
-            "w": 4,
-            "h": 8,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
       "id": "page-a4339ff2-cd95-4b71-8870-8dd75a0949b3",
       "title": "untitled page",
       "grids": {
@@ -881,10 +71,143 @@
         "cellHeight": 3,
         "children": [
           {
-            "h": 6,
-            "w": 3,
+            "h": 9,
+            "w": 4,
             "x": 0,
             "y": 0,
+            "id": "widget-qfuuuzqzl2s",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "h": 8,
+            "w": 3,
+            "x": 4,
+            "y": 0,
+            "id": "widget-l5y6sec56o",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 8,
+            "w": 4,
+            "x": 7,
+            "y": 0,
+            "id": "widget-x6urphra0n",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          },
+          {
+            "h": 3,
+            "w": 11,
+            "x": 0,
+            "y": 9,
+            "id": "widget-om27mnren4",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 7,
+            "w": 12,
+            "x": 0,
+            "y": 12,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "animate": false,
+              "column": "auto",
+              "layout": "list",
+              "margin": 8,
+              "cellHeightUnit": "rem",
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 8,
+                  "w": 2,
+                  "id": "widget-xys47m9p3sn",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 9,
+                  "w": 3,
+                  "id": "widget-s4rrc1mdcmc",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 2,
+                  "y": 0
+                },
+                {
+                  "h": 9,
+                  "w": 6,
+                  "id": "widget-eo637yymfgw",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\"}}",
+                  "x": 5,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-1ehayqc8ans"
+          },
+          {
+            "h": 6,
+            "w": 6,
+            "x": 0,
+            "y": 19,
+            "id": "widget-2ch5450hf7i",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\"}}"
+          },
+          {
+            "h": 5,
+            "x": 6,
+            "y": 19,
+            "id": "widget-ln8u5eudo1",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\"}}"
+          },
+          {
+            "h": 5,
+            "w": 4,
+            "x": 7,
+            "y": 19,
+            "id": "widget-fvwrklv7aj",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "name": "SimpleCard",
+            "id": "widget-okxggus609k",
+            "x": 7,
+            "y": 24,
+            "w": 5,
+            "h": 7,
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          },
+          {
+            "h": 9,
+            "w": 4,
+            "x": 0,
+            "y": 25,
+            "id": "widget-27qnrqmebsz",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\"}}"
+          },
+          {
+            "h": 8,
+            "w": 3,
+            "x": 4,
+            "y": 25,
             "id": "widget-orgo1yqqqdi",
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           }
@@ -1245,18 +568,18 @@
         "cellHeight": 2,
         "children": [
           {
-            "h": 18,
-            "w": 7,
+            "h": 19,
+            "w": 5,
             "x": 0,
             "y": 0,
             "id": "widget-kzr4tiziyc",
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
-            "h": 8,
+            "h": 12,
             "w": 3,
             "x": 0,
-            "y": 18,
+            "y": 19,
             "id": "widget-8x66art0avv",
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           }
@@ -1335,7 +658,7 @@
         "cellHeight": 2,
         "children": [
           {
-            "h": 17,
+            "h": 18,
             "w": 5,
             "x": 0,
             "y": 0,
@@ -1343,7 +666,7 @@
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
-            "h": 20,
+            "h": 22,
             "w": 6,
             "x": 5,
             "y": 0,
@@ -1351,10 +674,10 @@
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           },
           {
-            "h": 17,
+            "h": 18,
             "w": 5,
             "x": 0,
-            "y": 17,
+            "y": 18,
             "id": "widget-2pbtmhl6y9x",
             "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
           }
@@ -1433,7 +756,7 @@
         "cellHeight": 2,
         "children": [
           {
-            "h": 53,
+            "h": 61,
             "w": 8,
             "x": 2,
             "y": 0,
@@ -1446,14 +769,15 @@
               "sizeToContent": true,
               "minRow": 1,
               "alwaysShowResizeHandle": true,
-              "cellHeightUnit": "rem",
+              "animate": false,
               "column": "auto",
               "layout": "list",
               "margin": 5,
+              "cellHeightUnit": "rem",
               "cellHeight": 2,
               "children": [
                 {
-                  "h": 10,
+                  "h": 12,
                   "w": 3,
                   "id": "widget-zk293e37dwe",
                   "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
@@ -1461,7 +785,7 @@
                   "y": 0
                 },
                 {
-                  "h": 10,
+                  "h": 12,
                   "w": 3,
                   "id": "widget-zk3utnlygk",
                   "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
@@ -1469,7 +793,7 @@
                   "y": 0
                 },
                 {
-                  "h": 10,
+                  "h": 12,
                   "w": 3,
                   "id": "widget-u0x36dd8qu",
                   "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
@@ -1477,7 +801,7 @@
                   "y": 0
                 },
                 {
-                  "h": 10,
+                  "h": 12,
                   "w": 3,
                   "id": "widget-2mpp3c3mwq4",
                   "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
@@ -1485,7 +809,7 @@
                   "y": 0
                 },
                 {
-                  "h": 16,
+                  "h": 18,
                   "w": 5,
                   "id": "widget-abf2ahsg1tc",
                   "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
@@ -1493,7 +817,7 @@
                   "y": 10
                 },
                 {
-                  "h": 16,
+                  "h": 18,
                   "w": 5,
                   "id": "widget-rvzujbc39xn",
                   "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
@@ -1520,1091 +844,6 @@
           "breakpointForWindow": true,
           "breakpoints": [
             {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 11,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-guaxrqnh0qn",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-69ba070e-8bd2-43b6-b7d8-a7b46e72749a",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-p0y8t3veb0h",
-            "content": "{\"name\":\"CustomWidget\",\"props\":{\"theme\":\"dark\",\"layout\":\"grid\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 4,
-            "id": "widget-1dtlpiv8n0c",
-            "content": "{\"name\":\"Counter\",\"props\":{\"initialCount\":0,\"title\":\"This is Counter\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 8,
-            "id": "widget-wnc8l65adt",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 4,
-            "w": 4,
-            "x": 0,
-            "y": 12,
-            "id": "widget-j7puro2gc89",
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "h": 2,
-            "w": 12,
-            "x": 0,
-            "y": 16,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "sizeToContent": true,
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "sizeToContent": true,
-              "minRow": 1,
-              "alwaysShowResizeHandle": true,
-              "cellHeightUnit": "rem",
-              "column": "auto",
-              "layout": "list",
-              "margin": 5,
-              "cellHeight": 2,
-              "children": []
-            },
-            "children": [],
-            "id": "sub-grid-7bcrtmftcx8"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-6058cceb-dde0-466e-a44c-911db98be408",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 21,
-            "w": 12,
-            "x": 0,
-            "y": 0,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "minRow": 1,
-              "alwaysShowResizeHandle": false,
-              "cellHeightUnit": "rem",
-              "column": "auto",
-              "layout": "list",
-              "margin": 5,
-              "cellHeight": 2,
-              "children": [
-                {
-                  "h": 14,
-                  "w": 5,
-                  "id": "widget-3u0d29lmywc",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 12,
-                  "w": 4,
-                  "id": "widget-kyjewcgv1j7",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 5,
-                  "y": 0
-                },
-                {
-                  "h": 7,
-                  "w": 2,
-                  "id": "widget-x7z9h2ixpf",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 5,
-                  "y": 12
-                }
-              ]
-            },
-            "children": [],
-            "id": "sub-grid-cv9l24elvcs"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-b3d43900-7e33-427e-b29a-e2220b60cc08",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 15,
-            "w": 12,
-            "x": 0,
-            "y": 0,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "sizeToContent": true,
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "sizeToContent": true,
-              "minRow": 3,
-              "alwaysShowResizeHandle": false,
-              "column": "auto",
-              "cellHeightUnit": "rem",
-              "layout": "list",
-              "margin": 5,
-              "cellHeight": 2,
-              "children": [
-                {
-                  "h": 12,
-                  "w": 4,
-                  "id": "widget-r7qerkcixws",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}",
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 14,
-                  "w": 5,
-                  "id": "widget-24wlytal79r",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 4,
-                  "y": 0
-                }
-              ]
-            },
-            "children": [],
-            "id": "sub-grid-0soj288q28ej"
-          },
-          {
-            "h": 9,
-            "w": 3,
-            "x": 0,
-            "y": 15,
-            "id": "widget-2grjud1ulv",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 16,
-            "w": 3,
-            "x": 3,
-            "y": 15,
-            "id": "widget-juerlmciu7",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "h": 6,
-            "w": 2,
-            "x": 6,
-            "y": 15,
-            "id": "widget-zg8me2o3ex",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-87877592-042b-4a3a-aeba-6cf27f053988",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 12,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-e9gbm6bx44d",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 12,
-            "w": 5,
-            "x": 4,
-            "y": 0,
-            "id": "widget-ie7htfhd58g",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}"
-          },
-          {
-            "h": 16,
-            "w": 10,
-            "x": 1,
-            "y": 12,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "sizeToContent": true,
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "sizeToContent": true,
-              "minRow": 3,
-              "alwaysShowResizeHandle": false,
-              "animate": false,
-              "column": "auto",
-              "layout": "list",
-              "margin": 5,
-              "cellHeightUnit": "rem",
-              "cellHeight": 2,
-              "children": [
-                {
-                  "h": 12,
-                  "w": 4,
-                  "id": "widget-tmo7hfm7ag",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 0,
-                  "y": 0
-                },
-                {
-                  "h": 15,
-                  "w": 4,
-                  "id": "widget-uiw5m1xznb",
-                  "sizeToContent": true,
-                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"日本で働いた後に出国した外国人らの住民税徴収に関し、総務省が実態調査に乗り出す方向で検討していることが25日、分かった。住民税は前年の所得に応じた額を6月から定期的に支払うため、未納のまま帰国してしまうと、徴収できない事態となることがある。制度の周知不足などが背景にあるとみられ、総務省は徴収実務を踏まえて対応策を検討する。\\n【構図】東京税関、消費税3億円徴収せず\\n　出国者に対し徴収漏れがあるとの実態が、先の通常国会で取り上げられていた。総務省は一部の自治体に対し、徴収情報の管理の在り方といった実務の運用について聞き取りを進めており、内容を踏まえて具体的な調査の検討に入る。課題を洗い出し、着実な税収確保につなげたい考えだ。\\n　住民税は1月1日時点で日本に住所があり、前年に一定以上の収入があれば支払い義務が発生する。前年の所得で額が決まり、6月から市区町村が徴収し始める。\\n　総務省は外国人労働者や雇い先に対し、帰国する際に残額をまとめて支払う「一括徴収」の利用や、本人に代わって支払う「納税管理人」の指定を求めてきた。\",\"title\":\"This is Text\"}}",
-                  "x": 4,
-                  "y": 0
-                }
-              ]
-            },
-            "children": [],
-            "id": "sub-grid-olx81s6qyw"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-f9276ba7-1480-436c-8d1a-b4b574f71d91",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 11,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-55burea3un9",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-379e6ca3-6543-44df-ad58-7b2606f7f5a4",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 10,
-            "w": 5,
-            "x": 0,
-            "y": 0,
-            "id": "widget-gicrbzqmgbl",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 3,
-            "w": 4,
-            "x": 0,
-            "y": 10,
-            "id": "widget-6l4ffbwmv1j",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"This is a Text component providing text dynamically and render it in page.\",\"title\":\"This is Text\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-1a8a4293-940c-4035-8c19-aec930dff9ec",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-00fc18b1-f839-4713-b758-185e6cec338e",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-f0bfa77c-2ebe-4d17-970d-6c7e9a6ff57b",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 15,
-            "w": 6,
-            "x": 0,
-            "y": 0,
-            "id": "widget-2bu1mzq7o5u",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-0b089254-f332-430c-9d33-535e00935875",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-924a490b-e114-4513-9ab4-75dfd4c316f4",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 9,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-uf2mn47atw",
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-0756be3d-2e62-462c-8383-0b0035f84b06",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-2da2cc38-1402-45d4-a972-a38601d7bc56",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
               "c": 6,
               "w": 1024
             },
@@ -2648,65 +887,17 @@
         },
         "cellHeightUnit": "rem",
         "cellHeight": 2,
-        "children": []
-      }
-    },
-    {
-      "id": "page-23ed55bd-d581-4a6b-90b5-a9748aaeaacb",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "sizeToContent": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": []
+        "children": [
+          {
+            "h": 13,
+            "w": 4,
+            "x": 0,
+            "y": 0,
+            "id": "widget-ixsn96c2uj",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+          }
+        ]
       }
     }
   ]
