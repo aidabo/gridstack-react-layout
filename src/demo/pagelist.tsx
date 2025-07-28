@@ -9,7 +9,7 @@ import AddIcon from "@mui/icons-material/Add";
 import TrashIcon from "@mui/icons-material/Delete";
 
 import Stack from "@mui/material/Stack";
-import { PageProps } from "../components/stackoptions";
+import { PageProps } from "../lib/components/stackoptions";
 import { useLayoutStore } from "./api";
 
 export default function PageList() {

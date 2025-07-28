@@ -1,12 +1,12 @@
-import { GridStackProvider } from "./lib/grid-stack-provider";
-import { GridStackRenderProvider } from "./lib/grid-stack-render-provider";
+import { GridStackProvider } from "./grid-stack-provider";
+import { GridStackRenderProvider } from "./grid-stack-render-provider";
 import {
   GridStackRender,
   ComponentDataType,
   ComponentMap,
-} from "./lib/grid-stack-render";
-import { useGridStackContext } from "./lib/grid-stack-context";
-import { useGridStackWidgetContext } from "./lib/grid-stack-widget-context";
+} from "./grid-stack-render";
+import { useGridStackContext } from "./grid-stack-context";
+import { useGridStackWidgetContext } from "./grid-stack-widget-context";
 
 export {
   GridStackProvider,
@@ -40,4 +40,4 @@ export {
     type SaveLayoutFn
 };
 
-
+//export { default as styles } from './styles/index.css';

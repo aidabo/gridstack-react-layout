@@ -1,7 +1,7 @@
-import { ComponentMap } from "..";
-import { ComponentProps } from "../components/stackoptions";
+import { ComponentMap } from "../lib";
+import { ComponentProps } from "../lib/components/stackoptions";
 
-import Image from "../widgets/Image";
+import Image from "./widgets/Image";
 
 const useComponentProvider = () => {
   const getNewComponentMap = (): ComponentMap => {

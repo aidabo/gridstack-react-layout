@@ -50,7 +50,7 @@ import {
 
 import StackActions, { StackActionsRef } from "./stackactions";
 import DeleteDropZone from "./deletedropzone";
-import { GridStackDropEvent } from "../lib/grid-stack-render-provider";
+import { GridStackDropEvent } from "../grid-stack-render-provider";
 import PageInfoDialogs from "./pageinfodialog";
 
 import "../styles/index.css";

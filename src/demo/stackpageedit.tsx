@@ -1,13 +1,13 @@
-import StackPage from "../components/stackpage";
+import StackPage from "../lib/components/stackpage";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   PageProps,
   SaveLayoutFn,
   LoadLayoutFn,
   GoBackListFn,
-} from "../components/stackoptions";
+} from "../lib/components/stackoptions";
 import { useLayoutStore } from "./api";
-import { useComponentProvider } from "./mycomponents";
+import { useComponentProvider } from "./my-components";
 import { useState } from "react";
 
 export default function StackPageEdit(props: {mode: string}) {

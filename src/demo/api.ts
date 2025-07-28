@@ -1,4 +1,4 @@
-import { PageProps } from "../components/stackoptions"
+import { PageProps } from "../lib/components/stackoptions"
 
 const webApiUrl = "/api"
 
