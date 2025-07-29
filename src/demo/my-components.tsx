@@ -47,8 +47,8 @@ const useComponentProvider = () => {
 
       ImageCircle: ({ src, alt }: { src: string; alt?: string }) => {
         return (
-          <div className="flex items-center justify-center min-h-[64px] w-full overflow-x-scroll rounded-lg p-2 lg:overflow-visible">
-            <div className="relative min-w-[140px] w-full max-w-[384px] aspect-square">
+          <div className="flex items-center justify-center min-h-[32px] w-full overflow-x-scroll rounded-lg p-2 lg:overflow-visible">
+            <div className="relative min-w-[128px] w-full max-w-[384px] aspect-square">
               <div className="absolute inset-0 rounded-full overflow-hidden">
                 <img
                   className="object-cover w-full h-full"

@@ -20698,7 +20698,7 @@ const ia = "2rem", aa = [
   },
   children: []
 }, go = () => ({
-  id: `page-${ca()}`,
+  id: `${ca()}`,
   title: "untitled page",
   grids: sa
 }), wl = {
@@ -21430,3 +21430,4 @@ export {
   Ur as useGridStackContext,
   Y0 as useGridStackWidgetContext
 };
+//# sourceMappingURL=gridstack-page.es.js.map

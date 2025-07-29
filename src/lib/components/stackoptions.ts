@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { ComponentMap } from "..";
 import Text from "./Text";
 
-const CELL_HEIGHT = "2rem"; //32px;
+const CELL_HEIGHT = "1rem"; //16px;
 
 const BREAKPOINTS = [
   //{ c: 1, w: 300 },   // 1 column on screens < 300px
@@ -13,12 +13,15 @@ const BREAKPOINTS = [
   //{ c: 8, w: 1200 },  // 8 columns on screens > 1200px
 ];
 
-// Initial grid options
+/**
+ * Default grid options for the main grid.
+ * This includes settings for accepting widgets, removable elements, and layout configurations.
+ */
 export const gridOptions: GridStackOptions = {
   acceptWidgets: true,
   removable: "#trash",
   sizeToContent: true,
-  minRow: 5,
+  minRow: 10,
   columnOpts: {
     breakpointForWindow: true,
     breakpoints: BREAKPOINTS,
@@ -43,6 +46,10 @@ export const gridOptions: GridStackOptions = {
   children: [],
 };
 
+/**
+ * Default sub-grid options for nested grids.
+ * This includes settings for accepting widgets, removable elements, and layout configurations.
+ */
 export const subGridOptions: GridStackOptions = {
   acceptWidgets: true,
   removable: "#trash",
@@ -55,13 +62,16 @@ export const subGridOptions: GridStackOptions = {
       layout: "moveScale",
     },
     margin: 5,
-    minRow: 3,
+    minRow: 6,
     cellHeight: CELL_HEIGHT,
     children: [],
   },
   children: [],
 };
 
+/**
+ * Page properties interface
+ */
 export interface PageProps {
   id: string;
   title: string;
@@ -73,18 +83,29 @@ export interface PageProps {
   grids: GridStackOptions | GridStackWidget[] | undefined;
 }
 
+/**
+ * component properties interface
+ */
 export interface ComponentProps {
   [key: string]: any;
 }
 
+/**
+ * getDefaultPageProps - Returns the default properties for a page.
+ * @returns Default page properties with a unique ID and default grid options.
+ */
 export const getDefaultPageProps = (): PageProps => {
   return {
-    id: `page-${uuidv4()}`,
+    id: `${uuidv4()}`,
     title: "untitled page",
     grids: gridOptions,
   };
 };
 
+/**
+ * default component properties
+ * This is a default set of properties for components.
+ */
 const defaultComponentProps: ComponentProps = {
   Text: {
     content: `Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.
@@ -99,9 +120,23 @@ const defaultComponents: ComponentMap = {
   Text,
 };
 
+/**
+ * ComponentMapProvider - A function that returns a map of components.
+ * This will allow for dynamic customization of components.
+ */
 export type ComponentMapProvider = () => ComponentMap;
+
+/**
+ * ComponentPropsProvider - A function that returns a record of component properties.
+ * This will allow for dynamic customization of component props.
+ */
 export type ComponentPropsProvider = () => Record<string, any>;
 
+/**
+ * getComponentMap - Returns the default component map or merges with custom components if provided.
+ * @param fn a function that returns a custom component map
+ * @returns 
+ */
 export const getComponentMap = (fn?: ComponentMapProvider): ComponentMap => {
   if (fn) {
     const customMap = fn();
@@ -111,6 +146,11 @@ export const getComponentMap = (fn?: ComponentMapProvider): ComponentMap => {
   return defaultComponents;
 };
 
+/**
+ * getComponentProps - Returns the default component properties or merges with custom properties if provided.
+ * @param fn - A function that returns custom component properties
+ * @returns 
+ */
 export const getComponentProps = (
   fn?: ComponentPropsProvider
 ): ComponentProps => {
@@ -122,6 +162,11 @@ export const getComponentProps = (
   return defaultComponentProps;
 };
 
+/**
+ * Save page layout, if pageid is not the same as pageProps.id, it will as created a new page
+ * @param pageid - The ID of the page to save 
+ * @param pageProps - The properties of the page to save
+ */
 export type SaveLayoutFn = (
   pageid: string,
   pageProps: PageProps

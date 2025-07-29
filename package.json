@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "repository": "https://github.com/aidabo/gridstack-react-layout.git",
+  "author": "60-think.com",
+  "license": "MIT",  
   "description": "React GridStack page layout library",
   "main": "dist/lib/gridstack-page.umd.js",
   "module": "dist/lib/gridstack-page.es.js",
   "typings": "./dist/lib/index.d.ts",
   "files": [
+    "LICENSE",
+    "README.md",
     "dist/lib"
   ],
   "exports": {

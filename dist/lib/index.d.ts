@@ -12,12 +12,23 @@ export declare interface ComponentDataType<T = object> {
 
 export declare type ComponentMap = Record<string, ComponentType<any>>;
 
+/**
+ * ComponentMapProvider - A function that returns a map of components.
+ * This will allow for dynamic customization of components.
+ */
 export declare type ComponentMapProvider = () => ComponentMap;
 
+/**
+ * component properties interface
+ */
 export declare interface ComponentProps {
     [key: string]: any;
 }
 
+/**
+ * ComponentPropsProvider - A function that returns a record of component properties.
+ * This will allow for dynamic customization of component props.
+ */
 export declare type ComponentPropsProvider = () => Record<string, any>;
 
 export declare type GoBackListFn = () => void;
@@ -48,6 +59,9 @@ export declare function GridStackRenderProvider({ children, onGridStackDropEvent
 
 export declare type LoadLayoutFn = (pageid: string) => Promise<PageProps>;
 
+/**
+ * Page properties interface
+ */
 export declare interface PageProps {
     id: string;
     title: string;
@@ -59,6 +73,11 @@ export declare interface PageProps {
     grids: GridStackOptions | GridStackWidget[] | undefined;
 }
 
+/**
+ * Save page layout, if pageid is not the same as pageProps.id, it will as created a new page
+ * @param pageid - The ID of the page to save
+ * @param pageProps - The properties of the page to save
+ */
 export declare type SaveLayoutFn = (pageid: string, pageProps: PageProps) => Promise<void>;
 
 export declare function StackPage({ pageid, pageMode, onLoadLayout, onSaveLayout, componentMapProvider, componentPropsProvider, gobackList, }: {

@@ -7,7 +7,7 @@
         "acceptWidgets": true,
         "removable": "#trash",
         "sizeToContent": true,
-        "minRow": 5,
+        "minRow": 10,
         "columnOpts": {
           "breakpointForWindow": true,
           "breakpoints": [
@@ -51,31 +51,11 @@
           },
           "margin": 5,
           "minRow": 1,
-          "cellHeight": "2rem"
+          "cellHeight": "1rem"
         },
         "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "name": "Image",
-            "id": "widget-6k6g9fotdq2",
-            "x": 0,
-            "y": 0,
-            "w": 2,
-            "h": 8,
-            "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 8,
-            "w": 8,
-            "x": 2,
-            "y": 0,
-            "id": "widget-yvjduyehhfe",
-            "sizeToContent": true,
-            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
-          }
-        ]
+        "cellHeight": 1,
+        "children": []
       }
     },
     {
