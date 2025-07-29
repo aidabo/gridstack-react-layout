@@ -7,7 +7,7 @@
         "acceptWidgets": true,
         "removable": "#trash",
         "sizeToContent": true,
-        "minRow": 10,
+        "minRow": 5,
         "columnOpts": {
           "breakpointForWindow": true,
           "breakpoints": [
@@ -51,11 +51,137 @@
           },
           "margin": 5,
           "minRow": 1,
-          "cellHeight": "1rem"
+          "cellHeight": "2rem"
         },
         "cellHeightUnit": "rem",
-        "cellHeight": 1,
-        "children": []
+        "cellHeight": 2,
+        "children": [
+          {
+            "name": "ImageBlurred",
+            "id": "widget-qrbp3awf3l",
+            "x": 0,
+            "y": 0,
+            "w": 2,
+            "h": 7,
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "name": "ImageCircle",
+            "id": "widget-5j7sit9zcpn",
+            "x": 2,
+            "y": 0,
+            "w": 2,
+            "h": 10,
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-4bta484zoy",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "name": "SimpleCard",
+            "id": "widget-9s4newq9s4t",
+            "x": 8,
+            "y": 0,
+            "w": 4,
+            "h": 14,
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          },
+          {
+            "h": 10,
+            "w": 12,
+            "x": 0,
+            "y": 14,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "name": "Text",
+                  "id": "widget-yvttzlad1bf",
+                  "w": 6,
+                  "h": 6,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Image",
+                  "id": "widget-ewyiyml74z",
+                  "w": 2,
+                  "h": 6,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                },
+                {
+                  "name": "ImageBlurred",
+                  "id": "widget-ua88h0dssbg",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "x": 8,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-spghvn2x8v"
+          },
+          {
+            "name": "Text",
+            "id": "widget-nbw7outwg7o",
+            "x": 0,
+            "y": 24,
+            "w": 4,
+            "h": 7,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "name": "SimpleCard",
+            "id": "widget-8r88ghxwnrc",
+            "x": 4,
+            "y": 24,
+            "w": 7,
+            "h": 9,
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          },
+          {
+            "name": "ImageCircle",
+            "id": "widget-jrzxsc4cnip",
+            "x": 0,
+            "y": 31,
+            "w": 4,
+            "h": 14,
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          }
+        ]
       }
     },
     {
@@ -172,512 +298,7 @@
       }
     },
     {
-      "id": "page-09b48458-cf58-4e8e-be18-442571c5f753",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 3,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 12,
-            "w": 4,
-            "x": 0,
-            "y": 0,
-            "id": "widget-uzqulouzu4",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 6,
-            "w": 2,
-            "x": 4,
-            "y": 0,
-            "id": "widget-df6gbxhqqxh",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 6,
-            "w": 2,
-            "x": 4,
-            "y": 6,
-            "id": "widget-x6vm9vigh6f",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-80dedeff-0408-4f3a-9dcc-4a967c67f173",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 3,
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 12,
-            "w": 3,
-            "x": 0,
-            "y": 0,
-            "id": "widget-zjbktxlt04p",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 15,
-            "w": 4,
-            "x": 3,
-            "y": 0,
-            "id": "widget-eihmfdks4zs",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 23,
-            "w": 7,
-            "x": 0,
-            "y": 15,
-            "id": "widget-vhtreem6lh",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-c5c0b49b-6821-4de1-9b95-eae6d914b125",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 10,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 8,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 8,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 19,
-            "w": 5,
-            "x": 0,
-            "y": 0,
-            "id": "widget-kzr4tiziyc",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 12,
-            "w": 3,
-            "x": 0,
-            "y": 19,
-            "id": "widget-8x66art0avv",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-9c123733-1a2a-425f-a329-b13804751c2c",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 18,
-            "w": 5,
-            "x": 0,
-            "y": 0,
-            "id": "widget-t999xkn9nwr",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 22,
-            "w": 6,
-            "x": 5,
-            "y": 0,
-            "id": "widget-1nzdzi1w7z5h",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          },
-          {
-            "h": 18,
-            "w": 5,
-            "x": 0,
-            "y": 18,
-            "id": "widget-2pbtmhl6y9x",
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-0487fec3-df32-4feb-867c-228805467310",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 8,
-              "w": 1200
-            },
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 4,
-              "w": 800
-            },
-            {
-              "c": 2,
-              "w": 500
-            },
-            {
-              "c": 1,
-              "w": 300
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 300
-              },
-              {
-                "c": 2,
-                "w": 500
-              },
-              {
-                "c": 4,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              },
-              {
-                "c": 8,
-                "w": 1200
-              }
-            ],
-            "layout": "moveScale"
-          },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
-          {
-            "h": 61,
-            "w": 8,
-            "x": 2,
-            "y": 0,
-            "acceptWidgets": true,
-            "removable": "#trash",
-            "sizeToContent": true,
-            "subGridOpts": {
-              "acceptWidgets": true,
-              "removable": "#trash",
-              "sizeToContent": true,
-              "minRow": 1,
-              "alwaysShowResizeHandle": true,
-              "animate": false,
-              "column": "auto",
-              "layout": "list",
-              "margin": 5,
-              "cellHeightUnit": "rem",
-              "cellHeight": 2,
-              "children": [
-                {
-                  "h": 12,
-                  "w": 3,
-                  "id": "widget-zk293e37dwe",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 2,
-                  "y": 0
-                },
-                {
-                  "h": 12,
-                  "w": 3,
-                  "id": "widget-zk3utnlygk",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 6,
-                  "y": 0
-                },
-                {
-                  "h": 12,
-                  "w": 3,
-                  "id": "widget-u0x36dd8qu",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 2,
-                  "y": 0
-                },
-                {
-                  "h": 12,
-                  "w": 3,
-                  "id": "widget-2mpp3c3mwq4",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 6,
-                  "y": 0
-                },
-                {
-                  "h": 18,
-                  "w": 5,
-                  "id": "widget-abf2ahsg1tc",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 2,
-                  "y": 10
-                },
-                {
-                  "h": 18,
-                  "w": 5,
-                  "id": "widget-rvzujbc39xn",
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
-                  "x": 2,
-                  "y": 10
-                }
-              ]
-            },
-            "children": [],
-            "id": "sub-grid-9veaunjddb"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-21027c48-3564-41ef-862b-bc927f2c934c",
+      "id": "0ceda9ad-ca7e-4075-b494-ef062ccb4d55",
       "title": "untitled page",
       "grids": {
         "acceptWidgets": true,
@@ -734,77 +355,45 @@
         "children": [
           {
             "h": 13,
-            "w": 4,
+            "w": 2,
             "x": 0,
             "y": 0,
-            "id": "widget-ixsn96c2uj",
+            "id": "widget-oxhv0szc9lp",
             "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
-          }
-        ]
-      }
-    },
-    {
-      "id": "page-1de1dc15-1e0f-4030-b389-e6d6b743312d",
-      "title": "untitled page",
-      "grids": {
-        "acceptWidgets": true,
-        "removable": "#trash",
-        "sizeToContent": true,
-        "minRow": 5,
-        "columnOpts": {
-          "breakpointForWindow": true,
-          "breakpoints": [
-            {
-              "c": 6,
-              "w": 1024
-            },
-            {
-              "c": 3,
-              "w": 800
-            },
-            {
-              "c": 1,
-              "w": 500
-            }
-          ],
-          "layout": "moveScale",
-          "columnMax": 12
-        },
-        "margin": 5,
-        "subGridOpts": {
-          "acceptWidgets": true,
-          "removable": "#trash",
-          "sizeToContent": true,
-          "columnOpts": {
-            "breakpoints": [
-              {
-                "c": 1,
-                "w": 500
-              },
-              {
-                "c": 3,
-                "w": 800
-              },
-              {
-                "c": 6,
-                "w": 1024
-              }
-            ],
-            "layout": "moveScale"
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
           },
-          "margin": 5,
-          "minRow": 1,
-          "cellHeight": "2rem"
-        },
-        "cellHeightUnit": "rem",
-        "cellHeight": 2,
-        "children": [
+          {
+            "h": 10,
+            "w": 2,
+            "x": 2,
+            "y": 0,
+            "id": "widget-9wywm3d0n7p",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
           {
             "h": 11,
+            "w": 4,
+            "x": 4,
+            "y": 0,
+            "id": "widget-n5sb04f9rh",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 12,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-pu8rmp6o52g",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "h": 10,
             "w": 12,
             "x": 0,
-            "y": 0,
+            "y": 13,
             "acceptWidgets": true,
             "removable": "#trash",
             "sizeToContent": true,
@@ -821,82 +410,1165 @@
               "cellHeight": 2,
               "children": [
                 {
-                  "h": 9,
+                  "name": "ImageBlurred",
+                  "id": "widget-pvd0mfffzlh",
                   "w": 3,
-                  "id": "widget-bs1lffl39ah",
+                  "h": 9,
                   "sizeToContent": true,
-                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
                   "x": 0,
                   "y": 0
                 },
                 {
-                  "h": 10,
+                  "name": "Text",
+                  "id": "widget-e0qhoyoh6lb",
                   "w": 3,
-                  "id": "widget-2q2ucgo9m97",
+                  "h": 9,
                   "sizeToContent": true,
-                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}",
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
                   "x": 3,
                   "y": 0
                 },
                 {
-                  "h": 9,
+                  "name": "Image",
+                  "id": "widget-yc0k91s78z",
                   "w": 3,
-                  "id": "widget-kqah8nmxig",
+                  "h": 9,
                   "sizeToContent": true,
-                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
                   "x": 6,
                   "y": 0
                 }
               ]
             },
             "children": [],
-            "id": "sub-grid-nq4s3tavm9i"
+            "id": "sub-grid-l1zwg9ejno"
           },
           {
-            "name": "ImageCircle",
-            "id": "widget-d6wipdfwaa",
-            "x": 0,
-            "y": 11,
-            "w": 2,
             "h": 10,
+            "w": 2,
+            "x": 0,
+            "y": 23,
+            "id": "widget-wibwmucv3j",
             "sizeToContent": true,
             "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
           },
           {
-            "name": "ImageBlurred",
-            "id": "widget-ekkwcfkd86h",
+            "name": "Image",
+            "id": "widget-sdhemnff59i",
             "x": 2,
-            "y": 11,
+            "y": 23,
             "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 23,
+            "id": "widget-4p2y8o0fnsp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "8ad099fc-addc-42d6-9061-fc691b53fdb7",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 13,
+            "w": 2,
+            "x": 0,
+            "y": 0,
+            "id": "widget-oxhv0szc9lp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 10,
+            "w": 2,
+            "x": 2,
+            "y": 0,
+            "id": "widget-9wywm3d0n7p",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-qstsun2d93",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
             "h": 12,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-pu8rmp6o52g",
             "sizeToContent": true,
             "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
           },
           {
-            "name": "SimpleCard",
-            "id": "widget-28egkfajkrb",
-            "x": 6,
-            "y": 11,
-            "w": 5,
-            "h": 11,
+            "h": 10,
+            "w": 12,
+            "x": 0,
+            "y": 13,
+            "acceptWidgets": true,
+            "removable": "#trash",
             "sizeToContent": true,
-            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "name": "ImageBlurred",
+                  "id": "widget-pvd0mfffzlh",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Text",
+                  "id": "widget-e0qhoyoh6lb",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 3,
+                  "y": 0
+                },
+                {
+                  "name": "Image",
+                  "id": "widget-yc0k91s78z",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-l1zwg9ejno"
+          },
+          {
+            "h": 10,
+            "w": 2,
+            "x": 0,
+            "y": 23,
+            "id": "widget-wibwmucv3j",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
           },
           {
             "name": "Image",
-            "id": "widget-lq5ciz40nh",
+            "id": "widget-sdhemnff59i",
+            "x": 2,
+            "y": 23,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 23,
+            "id": "widget-4p2y8o0fnsp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "c6fc70e8-2109-494b-bedb-5b8323127b82",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 13,
+            "w": 2,
+            "x": 0,
+            "y": 0,
+            "id": "widget-oxhv0szc9lp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 10,
+            "w": 2,
+            "x": 2,
+            "y": 0,
+            "id": "widget-9wywm3d0n7p",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-n2xdauv5ndc",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 12,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-pu8rmp6o52g",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "h": 10,
+            "w": 12,
+            "x": 0,
+            "y": 13,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "name": "ImageBlurred",
+                  "id": "widget-pvd0mfffzlh",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Text",
+                  "id": "widget-e0qhoyoh6lb",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 3,
+                  "y": 0
+                },
+                {
+                  "name": "Image",
+                  "id": "widget-yc0k91s78z",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-l1zwg9ejno"
+          },
+          {
+            "h": 10,
+            "w": 2,
             "x": 0,
             "y": 23,
+            "id": "widget-wibwmucv3j",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-sdhemnff59i",
+            "x": 2,
+            "y": 23,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 23,
+            "id": "widget-4p2y8o0fnsp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "a1ab81ef-b24d-4b14-9f68-90c9cfa42954",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 13,
+            "w": 2,
+            "x": 0,
+            "y": 0,
+            "id": "widget-oxhv0szc9lp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 10,
+            "w": 2,
+            "x": 2,
+            "y": 0,
+            "id": "widget-9wywm3d0n7p",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-h5mv7l82jmo",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 12,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-pu8rmp6o52g",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "h": 10,
+            "w": 12,
+            "x": 0,
+            "y": 13,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "name": "ImageBlurred",
+                  "id": "widget-pvd0mfffzlh",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Text",
+                  "id": "widget-e0qhoyoh6lb",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 3,
+                  "y": 0
+                },
+                {
+                  "name": "Image",
+                  "id": "widget-yc0k91s78z",
+                  "w": 3,
+                  "h": 9,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-l1zwg9ejno"
+          },
+          {
+            "h": 10,
+            "w": 2,
+            "x": 0,
+            "y": 23,
+            "id": "widget-wibwmucv3j",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-sdhemnff59i",
+            "x": 2,
+            "y": 23,
+            "w": 4,
+            "h": 11,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 23,
+            "id": "widget-4p2y8o0fnsp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "04bd0e9e-bc69-41da-a59d-05dfb19ce39a",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 12,
+            "w": 2,
+            "x": 0,
+            "y": 0,
+            "id": "widget-oxhv0szc9lp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 12,
+            "w": 2,
+            "x": 2,
+            "y": 0,
+            "id": "widget-9wywm3d0n7p",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-aejzk9tyr66",
+            "x": 4,
+            "y": 0,
             "w": 4,
             "h": 13,
             "sizeToContent": true,
-            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/2025/03/aws-service-6.png\",\"title\":\"This is Image\"}}"
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 14,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-pu8rmp6o52g",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "h": 12,
+            "w": 12,
+            "x": 0,
+            "y": 14,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "name": "ImageBlurred",
+                  "id": "widget-pvd0mfffzlh",
+                  "w": 3,
+                  "h": 11,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Text",
+                  "id": "widget-e0qhoyoh6lb",
+                  "w": 3,
+                  "h": 8,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 3,
+                  "y": 0
+                },
+                {
+                  "name": "Image",
+                  "id": "widget-yc0k91s78z",
+                  "w": 3,
+                  "h": 10,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-l1zwg9ejno"
+          },
+          {
+            "h": 12,
+            "w": 2,
+            "x": 0,
+            "y": 26,
+            "id": "widget-wibwmucv3j",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-sdhemnff59i",
+            "x": 2,
+            "y": 26,
+            "w": 4,
+            "h": 13,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 26,
+            "id": "widget-4p2y8o0fnsp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e1a33c4f-8e8e-4cd0-800b-f114ab60e98b",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 12,
+            "w": 2,
+            "x": 0,
+            "y": 0,
+            "id": "widget-oxhv0szc9lp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}"
+          },
+          {
+            "h": 12,
+            "w": 2,
+            "x": 2,
+            "y": 0,
+            "id": "widget-9wywm3d0n7p",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-jyrdnudrp0e",
+            "x": 4,
+            "y": 0,
+            "w": 4,
+            "h": 13,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 14,
+            "w": 4,
+            "x": 8,
+            "y": 0,
+            "id": "widget-pu8rmp6o52g",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-aejzk9tyr66",
+            "x": 1,
+            "y": 13,
+            "w": 4,
+            "h": 13,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 12,
+            "w": 12,
+            "x": 0,
+            "y": 26,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": false,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "name": "ImageBlurred",
+                  "id": "widget-pvd0mfffzlh",
+                  "w": 3,
+                  "h": 11,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "name": "Text",
+                  "id": "widget-e0qhoyoh6lb",
+                  "w": 3,
+                  "h": 8,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Text\",\"props\":{\"content\":\"Any content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\\nEven better, continue typing to find the card you're looking for, hit enter, and avoid dragging your mouse altogether.\\nSome cards have a handy little shortcut, to keep you on track and in flow. Use --- to divide your paragraphs with a line, or ``` to add a code block. You can also drag and drop images directly into the editor to bypass the menu. \\nAny content other than text are what we call cards. Cards can be accessed by clicking the ➕ button or typing / at the beginning of a paragraph.\",\"title\":\"This is text card\"}}",
+                  "x": 3,
+                  "y": 0
+                },
+                {
+                  "name": "Image",
+                  "id": "widget-yc0k91s78z",
+                  "w": 3,
+                  "h": 10,
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 6,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-l1zwg9ejno"
+          },
+          {
+            "h": 12,
+            "w": 2,
+            "x": 0,
+            "y": 38,
+            "id": "widget-wibwmucv3j",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}"
+          },
+          {
+            "name": "Image",
+            "id": "widget-sdhemnff59i",
+            "x": 2,
+            "y": 38,
+            "w": 4,
+            "h": 13,
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 9,
+            "w": 6,
+            "x": 6,
+            "y": 38,
+            "id": "widget-4p2y8o0fnsp",
+            "sizeToContent": true,
+            "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5b63e317-3f9e-4e53-930f-06df324ea465",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": []
+      }
+    },
+    {
+      "id": "39bcfe38-c79d-4fd3-a22e-7179c6aa856a",
+      "title": "untitled page",
+      "grids": {
+        "acceptWidgets": true,
+        "removable": "#trash",
+        "sizeToContent": true,
+        "minRow": 5,
+        "columnOpts": {
+          "breakpointForWindow": true,
+          "breakpoints": [
+            {
+              "c": 6,
+              "w": 1024
+            },
+            {
+              "c": 3,
+              "w": 800
+            },
+            {
+              "c": 1,
+              "w": 500
+            }
+          ],
+          "layout": "moveScale",
+          "columnMax": 12
+        },
+        "margin": 5,
+        "subGridOpts": {
+          "acceptWidgets": true,
+          "removable": "#trash",
+          "sizeToContent": true,
+          "columnOpts": {
+            "breakpoints": [
+              {
+                "c": 1,
+                "w": 500
+              },
+              {
+                "c": 3,
+                "w": 800
+              },
+              {
+                "c": 6,
+                "w": 1024
+              }
+            ],
+            "layout": "moveScale"
+          },
+          "margin": 5,
+          "minRow": 1,
+          "cellHeight": "2rem"
+        },
+        "cellHeightUnit": "rem",
+        "cellHeight": 2,
+        "children": [
+          {
+            "h": 12,
+            "w": 12,
+            "x": 0,
+            "y": 0,
+            "acceptWidgets": true,
+            "removable": "#trash",
+            "sizeToContent": true,
+            "subGridOpts": {
+              "acceptWidgets": true,
+              "removable": "#trash",
+              "sizeToContent": true,
+              "minRow": 3,
+              "alwaysShowResizeHandle": true,
+              "cellHeightUnit": "rem",
+              "column": "auto",
+              "layout": "list",
+              "margin": 5,
+              "cellHeight": 2,
+              "children": [
+                {
+                  "h": 10,
+                  "w": 2,
+                  "id": "widget-bwrx5xx748",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"ImageCircle\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"alt\":\"Circle Image\",\"title\":\"This is ImageCircle\"}}",
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "h": 9,
+                  "w": 6,
+                  "id": "widget-l826sgbuh2a",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"SimpleCard\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\\n           Growth is not just about numbers, it's about the journey. and the people we meet along the way. life is a journey, not a destination. experience is the best teacher.\",\"date\":\"20 July 2022\",\"author\":\"Ai Dabo\",\"caption\":\"This think item\",\"title\":\"This is SimpleCard\"}}",
+                  "x": 2,
+                  "y": 0
+                },
+                {
+                  "h": 11,
+                  "w": 4,
+                  "id": "widget-pj2ktf9sif",
+                  "sizeToContent": true,
+                  "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}",
+                  "x": 8,
+                  "y": 0
+                }
+              ]
+            },
+            "children": [],
+            "id": "sub-grid-j7uo5p2z9g"
+          },
+          {
+            "h": 11,
+            "w": 4,
+            "x": 0,
+            "y": 12,
+            "id": "widget-xlhp6v86ba",
+            "sizeToContent": true,
+            "content": "{\"name\":\"Image\",\"props\":{\"src\":\"https://dnicugzydez8x.cloudfront.net/60-think-prd/2025/07/image-26.png\",\"title\":\"This is Image\"}}"
+          },
+          {
+            "h": 12,
+            "w": 4,
+            "x": 4,
+            "y": 12,
+            "id": "widget-srdunb1t4sg",
+            "sizeToContent": true,
+            "content": "{\"name\":\"ImageBlurred\",\"props\":{\"src\":\"https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80\",\"content\":\"Growth\",\"date\":\"20 July 2022\",\"author\":\"Sara Lamalo\",\"alt\":\"Nature Image\",\"title\":\"This is ImageBlurred\"}}"
           },
           {
             "name": "Text",
-            "id": "widget-8ijknhuam44",
-            "x": 4,
-            "y": 23,
+            "id": "widget-ukntv6ubxd9",
+            "x": 8,
+            "y": 12,
             "w": 4,
             "h": 7,
             "sizeToContent": true,

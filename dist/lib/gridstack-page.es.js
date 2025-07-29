@@ -20645,7 +20645,7 @@ process.env.NODE_ENV !== "production" && (Iu.propTypes = {
 function M0({ content: e }) {
   return /* @__PURE__ */ x.jsx("div", { className: "flex items-start p-2 bg-white border rounded shadow-sm text-left", children: /* @__PURE__ */ x.jsx("div", { children: /* @__PURE__ */ x.jsx("p", { className: "text-sm", children: e }) }) });
 }
-const ia = "2rem", aa = [
+const ia = "1rem", aa = [
   //{ c: 1, w: 300 },   // 1 column on screens < 300px
   { c: 1, w: 500 },
   // 2 columns between 300px - 500px
@@ -20658,7 +20658,7 @@ const ia = "2rem", aa = [
   acceptWidgets: !0,
   removable: "#trash",
   sizeToContent: !0,
-  minRow: 5,
+  minRow: 10,
   columnOpts: {
     breakpointForWindow: !0,
     breakpoints: aa,
@@ -20692,7 +20692,7 @@ const ia = "2rem", aa = [
       layout: "moveScale"
     },
     margin: 5,
-    minRow: 3,
+    minRow: 6,
     cellHeight: ia,
     children: []
   },

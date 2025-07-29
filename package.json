@@ -1,12 +1,22 @@
 {
   "name": "gridstack-page",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
-  "repository": "https://github.com/aidabo/gridstack-react-layout.git",
-  "author": "60-think.com",
-  "license": "MIT",  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidabo/gridstack-react-layout.git"
+  },
+  "author": "jbcdev2019",
+  "license": "MIT",
   "description": "React GridStack page layout library",
+  "keywords": [
+    "grid",
+    "responsive layout",
+    "page create",
+    "react full controlled",
+    "component",
+    "draggable"
+  ],
   "main": "dist/lib/gridstack-page.umd.js",
   "module": "dist/lib/gridstack-page.es.js",
   "typings": "./dist/lib/index.d.ts",
